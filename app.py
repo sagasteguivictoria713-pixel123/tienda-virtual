@@ -95,6 +95,20 @@ SERVICIOS = [
         "entrega": "Entrega al instante",
         "desc": "✔ Millones de plantillas premium.\n✔ Herramientas de IA para diseño.\n✔ Fondo transparente y redimensionado mágico.\n✔ Recursos gráficos e imágenes premium.",
         "imagen": "images/canva1.png",
+    },
+    {
+        "nombre": "CHATGPT PLUS",
+        "precio": 13.50,
+        "entrega": "Entrega al instante",
+        "desc": "✔ Dispositivo - Se Brinda Correo y Contraseña Listo para Usar\n✔ Garantía Por 30 días",
+        "imagen": "images/chatgpt",
+    },
+    {
+        "nombre": "GEMINI PRO",
+        "precio": 9.50,
+        "entrega": "Entrega al instante",
+        "desc": "✔ Se activa A tu Correo 💌\n✔ Garantía por 30 días",
+        "imagen": "images/geminipro",
     }
 ]
 
