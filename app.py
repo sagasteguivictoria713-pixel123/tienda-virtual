@@ -101,14 +101,14 @@ SERVICIOS = [
         "precio": 13.50,
         "entrega": "Entrega al instante",
         "desc": "✔ Dispositivo - Se Brinda Correo y Contraseña Listo para Usar\n✔ Garantía Por 30 días",
-        "imagen": "images/chatgpt",
+        "imagen": "images/chatgpt.png",
     },
     {
         "nombre": "GEMINI PRO",
         "precio": 9.50,
         "entrega": "Entrega al instante",
         "desc": "✔ Se activa A tu Correo 💌\n✔ Garantía por 30 días",
-        "imagen": "images/geminipro",
+        "imagen": "images/geminipro.jpeg",
     }
 ]
 
