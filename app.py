@@ -108,7 +108,7 @@ SERVICIOS = [
         "precio": 9.50,
         "entrega": "Entrega al instante",
         "desc": "✔ Se activa A tu Correo 💌\n✔ Garantía por 30 días",
-        "imagen": "images/geminipro.jpeg",
+        "imagen": "images/geminipro1",
     }
 ]
 
