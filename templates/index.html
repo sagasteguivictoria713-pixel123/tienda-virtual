@@ -1083,6 +1083,14 @@ function filterServicios(type) {
     }
   });
 }
+
+// ============================================================================
+// INICIALIZAR FILTRO AL CARGAR LA PÁGINA
+// ============================================================================
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('📌 [FILTRO] DOMContentLoaded - Aplicando filtro inicial: perfil');
+  filterServicios('perfil');
+});
 </script>
 <!-- FIN SCRIPT DE FILTRO -->
 
