@@ -624,13 +624,10 @@ footer{padding:48px 24px 32px; border-top:1px solid var(--border); text-align:ce
     </div>
     <!-- PESTAÑAS DE FILTRO -->
     <div class="tabs-container" style="margin-bottom: 32px;">
-      <button class="tab-btn active" data-filter="all" onclick="filterServicios('all')">
-        Ver todos
-      </button>
-      <button class="tab-btn" data-filter="Perfil" onclick="filterServicios('Perfil')">
+      <button class="tab-btn active" data-filter="perfil" onclick="filterServicios('perfil')">
         Perfiles
       </button>
-      <button class="tab-btn" data-filter="Cuenta Completa" onclick="filterServicios('Cuenta Completa')">
+      <button class="tab-btn" data-filter="cuenta_completa" onclick="filterServicios('cuenta_completa')">
         Cuentas Completas
       </button>
     </div>
@@ -1078,15 +1075,11 @@ function filterServicios(type) {
   // Filtrar tarjetas de servicios
   const cards = document.querySelectorAll('.serv-card');
   cards.forEach(card => {
-    if(type === 'all') {
+    const cardType = card.getAttribute('data-type');
+    if(cardType === type) {
       card.classList.remove('hidden');
     } else {
-      const cardType = card.getAttribute('data-type');
-      if(cardType === type) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
+      card.classList.add('hidden');
     }
   });
 }
