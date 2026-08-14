@@ -186,13 +186,13 @@ header{
 ..section-head h2{font-size:clamp(1.7rem,3vw,2.3rem);}
 .section-alt{background:var(--bg-alt);}
 
-.servicios-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:22px;}
+.servicios-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:22px; align-items:stretch;}
 .serv-card{
   background:#0a0c16; color:#f5f5f8; border-radius:28px; overflow:hidden;
   position:relative; display:flex; flex-direction:column; gap:0;
   border:1px solid rgba(255,255,255,0.08);
   box-shadow:0 24px 80px -32px rgba(0,0,0,0.55);
-  min-height:340px;
+  min-height:340px; height:100%;
   transition: transform .18s, background .18s, box-shadow .18s, border-color .18s;
 }
 .serv-card:hover{
@@ -214,14 +214,14 @@ header{
 .serv-top .serv-badge{ display:inline-flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.08); color:#dcdce7; padding:6px 12px; border-radius:999px; font-size:0.72rem; margin-bottom:8px; letter-spacing:0.08em; text-transform:uppercase; }
 .serv-top .serv-meta{ font-size:0.8rem; color:#bfc4d4; letter-spacing:0.08em; margin-bottom:6px; }
 .serv-top .serv-name{ font-family:'Space Grotesk',sans-serif; font-size:1.1rem; margin-top:0; line-height:1.2; font-weight:700; }
-.serv-foot{ background:#0d0830; color:var(--paper); padding:16px; display:flex; flex-direction:column; gap:10px; align-items:flex-start; min-height:170px; }
-.serv-quantity{ display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); border-radius:999px; padding:6px 8px; }
+.serv-foot{ background:#0d0830; color:var(--paper); padding:16px; display:flex; flex-direction:column; gap:10px; align-items:flex-start; min-height:170px; flex:1; }
+.serv-foot .serv-desc{ color:#e8e8f0; font-family:'Inter',sans-serif; font-size:0.92rem; line-height:1.4; min-height:120px; display:block; }
+.serv-quantity{ display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); border-radius:999px; padding:6px 8px; margin-top:auto; }
 .qty-btn{ width:34px; height:34px; border-radius:50%; border:1px solid rgba(255,255,255,0.18); background:rgba(0,0,0,0.14); color:var(--paper); font-size:1.1rem; cursor:pointer; }
 .qty-btn:hover{ background:rgba(255,255,255,0.12); }
 .qty-value{ min-width:28px; text-align:center; font-weight:700; }
 .price-big{ font-family:'Space Mono',monospace; font-size:2rem; font-weight:700; color:#7ef0ff; }
-.serv-foot .serv-desc{ color:#e8e8f0; font-family:'Inter',sans-serif; font-size:0.92rem; line-height:1.4; }
-.serv-actions{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; width:100%; justify-content:space-between; }
+.serv-actions{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; width:100%; justify-content:space-between; margin-top:0; }
 .serv-foot .serv-buy{ background:#7d3cff; color:#fff; padding:10px 16px; border-radius:28px; font-weight:800; text-align:center; min-width:140px; text-transform:uppercase; }
 .serv-foot .serv-buy:hover{ background:#5b1cf2; }
 .serv-name{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.12rem; margin-top:6px;}
@@ -310,9 +310,218 @@ footer{padding:48px 24px 32px; border-top:1px solid var(--border); text-align:ce
 .modal ol li{margin-bottom:6px;}
 .modal .btn{width:100%; justify-content:center; margin-top:6px;}
 
+/* LOADER STYLES */
+.loader-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #050D24 0%, #0A265B 50%, #050D24 100%);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.8s ease-out;
+  overflow: hidden;
+}
+
+/* Textura de estrellas en el fondo */
+.loader-overlay::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 60px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 50px 50px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 90px 10px, #fff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: twinkle 5s ease-in-out infinite;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+@keyframes twinkle{
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.3; }
+}
+
+.loader-overlay.fade-out{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-content{
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  background: linear-gradient(135deg, rgba(10, 38, 91, 0.6) 0%, rgba(5, 13, 36, 0.8) 100%);
+  border: 1px solid rgba(73, 226, 182, 0.25);
+  border-radius: 24px;
+  padding: 48px 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(73, 226, 182, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  min-width: 340px;
+  max-width: 420px;
+}
+
+.loader-title{
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #F3ECD8;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+
+.loader-title .highlight{
+  color: #49E2B6;
+  font-weight: 700;
+}
+
+.loader-circle-wrapper{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.loader-svg-circle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.loader-circle-bg{
+  fill: none;
+  stroke: rgba(73, 226, 182, 0.1);
+  stroke-width: 4;
+}
+
+.loader-circle-progress{
+  fill: none;
+  stroke: #49E2B6;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 565.48;
+  stroke-dashoffset: 565.48;
+  transition: stroke-dashoffset 0.05s linear;
+  filter: drop-shadow(0 0 12px rgba(73, 226, 182, 0.6));
+}
+
+.loader-logo-inside{
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 8px;
+  object-fit: cover;
+  animation: pulse-loader 1.5s ease-in-out infinite;
+  z-index: 2;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse-loader{
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+}
+
+.loader-info{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.loader-subtitle{
+  font-size: 0.9rem;
+  color: #9FC8E1;
+  font-weight: 500;
+}
+
+.loader-percentage{
+  font-size: 2rem;
+  font-weight: 700;
+  color: #49E2B6;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 8px rgba(73, 226, 182, 0.2);
+}
+
+.loader-progress-bar-container{
+  width: 100%;
+  height: 6px;
+  background: rgba(73, 226, 182, 0.15);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(73, 226, 182, 0.2);
+}
+
+.loader-progress-bar{
+  height: 100%;
+  background: linear-gradient(90deg, #49E2B6, #57B98A);
+  width: 0%;
+  border-radius: 999px;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 8px rgba(73, 226, 182, 0.5);
+}
+
 </style>
 </head>
 <body id="top">
+
+<!-- LOADER INICIAL -->
+<div class="loader-overlay" id="loader-overlay">
+  <div class="loader-content">
+    <div class="loader-title">
+      Bienvenidos a <span class="highlight">Precios Competitivos</span> Store
+    </div>
+    
+    <div class="loader-circle-wrapper">
+      <svg class="loader-svg-circle" viewBox="0 0 200 200">
+        <defs>
+          <linearGradient id="gradientLoader" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#49E2B6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#57B98A;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <circle class="loader-circle-bg" cx="100" cy="100" r="90"></circle>
+        <circle class="loader-circle-progress" id="loader-progress-circle" cx="100" cy="100" r="90"></circle>
+      </svg>
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="loader-logo-inside" id="loader-logo-inside">
+    </div>
+    
+    <div class="loader-info">
+      <div class="loader-subtitle">Preparando tu experiencia...</div>
+      <div class="loader-percentage" id="loader-percentage">0%</div>
+      <div class="loader-progress-bar-container">
+        <div class="loader-progress-bar" id="loader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIN LOADER -->
 
 <header>
   <div class="nav wrap">
@@ -734,6 +943,143 @@ document.getElementById('overlay')?.addEventListener('click', e => {
 document.getElementById('modal-close')?.addEventListener('click', () => {
   document.getElementById('overlay')?.classList.remove('open');
 });
+
+// ============================================================================
+// LOADER ANIMATION - VERSIÓN ULTRA ROBUSTA CON DEBUGGING COMPLETO
+// ============================================================================
+
+console.log('📌 [LOADER SCRIPT] Script loaded and executing...');
+
+function initializeLoaderV2(){
+  try {
+    console.log('\n🔵 [LOADER] INICIO DE INICIALIZACIÓN');
+    
+    // Paso 1: Verificar elementos
+    const loaderOverlay = document.getElementById('loader-overlay');
+    const loaderCircle = document.getElementById('loader-progress-circle');
+    const loaderPercentage = document.getElementById('loader-percentage');
+    const loaderProgressBar = document.getElementById('loader-progress-bar');
+    
+    console.log('🔍 [LOADER] Elementos encontrados:');
+    console.log('  - loader-overlay:', loaderOverlay ? '✅ FOUND' : '❌ NOT FOUND');
+    console.log('  - loader-progress-circle:', loaderCircle ? '✅ FOUND' : '❌ NOT FOUND');
+    console.log('  - loader-percentage:', loaderPercentage ? '✅ FOUND' : '❌ NOT FOUND');
+    console.log('  - loader-progress-bar:', loaderProgressBar ? '✅ FOUND' : '❌ NOT FOUND');
+    
+    if(!loaderOverlay || !loaderCircle || !loaderPercentage || !loaderProgressBar){
+      console.error('❌ [LOADER] ELEMENTOS FALTANTES - No se puede inicializar');
+      return false;
+    }
+    
+    console.log('✅ [LOADER] Todos los elementos encontrados - iniciando animación');
+    
+    // Paso 2: Configurar variables
+    let percentage = 0;
+    let lastLoggedPercentage = -1;
+    const duration = 2500; // 2.5 segundos
+    const circumference = 2 * Math.PI * 90; // 2πr (r=90)
+    const startTime = Date.now();
+    let intervalId = null;
+    
+    console.log('📊 [LOADER] Configuración:');
+    console.log('  - Duración:', duration + 'ms');
+    console.log('  - Circunferencia:', circumference.toFixed(2) + 'px');
+    
+    // Paso 3: Crear función de actualización
+    function updateLoader(){
+      try {
+        const elapsed = Date.now() - startTime;
+        const newPercentage = Math.min(Math.floor((elapsed / duration) * 100), 100);
+        percentage = newPercentage;
+        
+        // Calcular offset del círculo
+        const offset = circumference - (percentage / 100) * circumference;
+        
+        // Actualizar SVG del círculo
+        loaderCircle.style.strokeDashoffset = offset;
+        
+        // Actualizar barra de progreso horizontal
+        loaderProgressBar.style.width = percentage + '%';
+        
+        // Actualizar texto de porcentaje
+        loaderPercentage.textContent = percentage + '%';
+        
+        // Log cada 5% o al 100%
+        if(percentage % 5 === 0 && percentage !== lastLoggedPercentage){
+          console.log('📈 [LOADER] Progreso: ' + percentage + '% (offset: ' + offset.toFixed(2) + ')');
+          lastLoggedPercentage = percentage;
+        }
+        
+        // Cuando llega a 100%
+        if(percentage >= 100){
+          console.log('✅ [LOADER] ¡Llegó a 100%!');
+          clearInterval(intervalId);
+          
+          // Esperar 200ms y luego fade out
+          setTimeout(() => {
+            console.log('🎬 [LOADER] Iniciando fade out...');
+            loaderOverlay.classList.add('fade-out');
+            console.log('✨ [LOADER] Fade out aplicado - el sitio debe mostrarse ahora');
+          }, 200);
+        }
+      } catch(err){
+        console.error('❌ [LOADER] Error en updateLoader():', err);
+      }
+    }
+    
+    // Paso 4: Crear interval
+    console.log('⏱️  [LOADER] Creando setInterval cada 20ms...');
+    intervalId = setInterval(updateLoader, 20);
+    console.log('✅ [LOADER] setInterval creado con ID:', intervalId);
+    
+    // Actualizar inmediatamente para mostrar 0%
+    updateLoader();
+    
+    console.log('🟢 [LOADER] INICIALIZACIÓN COMPLETADA EXITOSAMENTE\n');
+    return true;
+    
+  } catch(err){
+    console.error('❌ [LOADER] Error crítico en initializeLoaderV2():', err);
+    console.error('Stack:', err.stack);
+    return false;
+  }
+}
+
+// ============================================================================
+// TRIGGERING - Ejecutar con múltiples métodos para asegurar ejecución
+// ============================================================================
+
+console.log('📌 [LOADER] document.readyState:', document.readyState);
+
+if(document.readyState === 'loading'){
+  console.log('⏳ [LOADER] DOM aún cargando - esperando DOMContentLoaded...');
+  document.addEventListener('DOMContentLoaded', function(){
+    console.log('✅ [LOADER] DOMContentLoaded disparado');
+    initializeLoaderV2();
+  });
+} else if(document.readyState === 'interactive' || document.readyState === 'complete'){
+  console.log('✅ [LOADER] DOM ya cargado - ejecutando inmediatamente');
+  initializeLoaderV2();
+}
+
+// Fallback: ejecutar también con window.onload
+window.addEventListener('load', function(){
+  console.log('📌 [LOADER] window.load disparado - verificando si loader ya se ejecutó...');
+  if(document.getElementById('loader-overlay')?.classList.contains('fade-out')){
+    console.log('✅ [LOADER] Ya completado');
+  } else {
+    console.log('⚠️  [LOADER] Intentando ejecutar como fallback...');
+    initializeLoaderV2();
+  }
+});
+
+// Fallback 2: setTimeout después de 100ms
+setTimeout(() => {
+  if(!document.getElementById('loader-overlay')?.classList.contains('fade-out')){
+    console.log('⚠️  [LOADER] setTimeout fallback - ejecutando...');
+    initializeLoaderV2();
+  }
+}, 100);
 </script>
 
 </body>
