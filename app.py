@@ -34,6 +34,7 @@ NEGOCIO = {
 SERVICIOS = [
     {
         "nombre": "NETFLIX PREMIUN",
+        "tipo": "Perfil",
         "precio": 14.50,
         "entrega": "Entrega al instante",
         "desc": "✔ Películas, series y producciones exclusivas de Netflix.\n✔ Descarga tus títulos favoritos y míralos sin conexión.\n✔ Calidad de video hasta 4K Ultra HD + HDR.\n✔ Audio espacial disponible en títulos compatibles.",
@@ -42,6 +43,7 @@ SERVICIOS = [
     },
     {
         "nombre": "DISNEY PREMIUN",
+        "tipo": "Perfil",
         "precio": 9.50,
         "entrega": "Entrega al instante",
         "desc": "✔ Canales de ESPN y deportes en vivo.\n✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Calidad de video hasta 4K UHD y HDR.\n✔ Descarga contenido para verlo sin conexión.",
@@ -49,6 +51,7 @@ SERVICIOS = [
     },
     {
         "nombre": "DISNEY STANDARD",
+        "tipo": "Perfil",
         "precio": 7.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Descarga contenido y disfruta sin conexión.\n✔ Calidad de video hasta Full HD 1080p.\n✔ No incluye los canales de ESPN disponibles en Disney+ Premium.",
@@ -56,6 +59,7 @@ SERVICIOS = [
     },
     {
         "nombre": "PRIME VIDEO",
+        "tipo": "Perfil",
         "precio": 5.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Películas, series y producciones Amazon Original.\n✔ Descarga contenido y disfruta sin conexión.\n✔ Calidad de video HD y Ultra HD en dispositivos compatibles.\n✔ Disponible en Smart TV, celular, tablet y computadora.",
@@ -63,6 +67,7 @@ SERVICIOS = [
     },
     {
         "nombre": "HBO MAX",
+        "tipo": "Perfil",
         "precio": 6.50,
         "entrega": "Entrega en 24h",
         "desc": "✔ Series originales de HBO.\n✔ Películas taquilleras.\n✔ Universo DC y Warner Bros.\n✔ Estrenos exclusivos.",
@@ -70,6 +75,7 @@ SERVICIOS = [
     },
     {
         "nombre": "CRUNCHYROLL",
+        "tipo": "Perfil",
         "precio": 5.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Miles de episodios de anime.\n✔ Estrenos en simulcast.\n✔ Subtítulos en español.\n✔ Amplio catálogo de anime.",
@@ -77,6 +83,7 @@ SERVICIOS = [
     },
     {
         "nombre": "SPOTIFY PREMIUN",
+        "tipo": "Perfil",
         "precio": 9.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Música sin anuncios.\n✔ Descargas para escuchar sin internet.\n✔ Saltos ilimitados.\n✔ Máxima calidad de audio.",
@@ -84,6 +91,7 @@ SERVICIOS = [
     },
     {
         "nombre": "YOUTUBE PREMIUN 12 MESES",
+        "tipo": "Cuenta Completa",
         "precio": 150.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Entregamos correo y contraseña listos para usar.\n✔ Disfruta videos y música sin anuncios.\n✔ Descarga contenido y míralo sin conexión.\n✔ Reproducción en segundo plano con YouTube Music Premium.",
@@ -91,6 +99,7 @@ SERVICIOS = [
     },
     {
         "nombre": "VIX PREMIUN",
+        "tipo": "Perfil",
         "precio": 3.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Series y películas en español.\n✔ Deportes en vivo (según disponibilidad).\n✔ Novelas y contenido exclusivo.\n✔ Sin anuncios en contenido Premium.",
@@ -98,6 +107,7 @@ SERVICIOS = [
     },
     {
         "nombre": "PARAMOUNT+",
+        "tipo": "Perfil",
         "precio": 8.50,
         "entrega": "Entrega al instante",
         "desc": "✔ Películas taquilleras y series originales.\n✔ Contenido de Nickelodeon, MTV, Comedy Central y más.\n✔ Mira en TV, celular, tablet y computadora.\n✔ Descarga títulos y disfruta sin conexión.",
@@ -105,6 +115,7 @@ SERVICIOS = [
     },
     {
         "nombre": "CANVA PRO",
+        "tipo": "Cuenta Completa",
         "precio": 3.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Millones de plantillas premium.\n✔ Herramientas de IA para diseño.\n✔ Fondo transparente y redimensionado mágico.\n✔ Recursos gráficos e imágenes premium.",
@@ -112,6 +123,7 @@ SERVICIOS = [
     },
     {
         "nombre": "CAPCUT PRO",
+        "tipo": "Cuenta Completa",
         "precio": 12.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Plantillas, efectos y recursos Premium exclusivos.\n✔ Herramientas avanzadas de IA para edición de video.\n✔ Exportación en 4K y videos sin marca de agua.\n✔ Edición en móvil, PC y web con almacenamiento en la nube.",
@@ -119,6 +131,7 @@ SERVICIOS = [
     },
     {
         "nombre": "MICROSOFT 365",
+        "tipo": "Cuenta Completa",
         "precio": 25.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Word, Excel, PowerPoint y Outlook incluidos.\n✔ Almacenamiento seguro en la nube con OneDrive.\n✔ Acceso desde PC, Mac, celular y tablet.\n✔ Herramientas de IA con Microsoft Copilot.",
@@ -126,6 +139,7 @@ SERVICIOS = [
     },
     {
         "nombre": "CHATGPT PLUS",
+        "tipo": "Cuenta Completa",
         "precio": 13.50,
         "entrega": "Entrega al instante",
         "desc": "✔ Se brinda correo y contraseña listo para usar.\n✔ Garantía por 30 días.\n✔ Acceso a modelos avanzados de razonamiento.\n✔ Creación de imágenes y análisis de archivos.",
@@ -133,6 +147,7 @@ SERVICIOS = [
     },
     {
         "nombre": "GEMINI PRO",
+        "tipo": "Cuenta Completa",
         "precio": 9.50,
         "entrega": "Entrega al instante",
         "desc": "✔ Se activa a tu correo.\n✔ Garantía por 30 días.\n✔ Acceso ampliado al modelo Gemini Pro.\n✔ IA integrada con Gmail, Docs y otras apps de Google.",

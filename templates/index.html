@@ -487,6 +487,47 @@ footer{padding:48px 24px 32px; border-top:1px solid var(--border); text-align:ce
   box-shadow: 0 0 8px rgba(73, 226, 182, 0.5);
 }
 
+/* ===== ESTILOS PARA PESTAÑAS DE FILTRO ===== */
+.tabs-container{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tab-btn{
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover{
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.tab-btn.active{
+  background: linear-gradient(135deg, #57B98A 0%, #89DFC0 100%);
+  color: #111;
+  border-color: #57B98A;
+  box-shadow: 0 8px 20px rgba(87, 185, 138, 0.3);
+}
+
+.serv-card[data-type]{
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.serv-card.hidden{
+  display: none;
+}
+
 </style>
 </head>
 <body id="top">
@@ -586,9 +627,22 @@ footer{padding:48px 24px 32px; border-top:1px solid var(--border); text-align:ce
       <div class="eyebrow">Catálogo</div>
       <h2>Elige tu servicio</h2>
     </div>
-    <div class="servicios-grid">
+    <!-- PESTAÑAS DE FILTRO -->
+    <div class="tabs-container" style="margin-bottom: 32px;">
+      <button class="tab-btn active" data-filter="all" onclick="filterServicios('all')">
+        Ver todos
+      </button>
+      <button class="tab-btn" data-filter="Perfil" onclick="filterServicios('Perfil')">
+        Perfiles
+      </button>
+      <button class="tab-btn" data-filter="Cuenta Completa" onclick="filterServicios('Cuenta Completa')">
+        Cuentas Completas
+      </button>
+    </div>
+    <!-- FIN PESTAÑAS -->
+    <div class="servicios-grid" id="servicios-grid">
       {% for s in servicios %}
-      <div class="serv-card">
+      <div class="serv-card" data-type="{{ s.tipo }}">
         {% if s.use_as_background %}
         <div class="serv-media" style="background-image: url('{{ url_for('static', filename=s.imagen) }}')"></div>
         {% elif s.imagen %}
@@ -598,7 +652,7 @@ footer{padding:48px 24px 32px; border-top:1px solid var(--border); text-align:ce
         {% endif %}
 
         <div class="serv-top">
-          <div class="serv-badge">Perfil individual</div>
+          <div class="serv-badge">{{ s.tipo }}</div>
           <div class="serv-meta">{{ s.entrega }}</div>
           <div class="serv-name">{{ s.nombre }}</div>
         </div>
@@ -1081,6 +1135,35 @@ setTimeout(() => {
   }
 }, 100);
 </script>
+
+<!-- SCRIPT PARA FILTRAR POR TIPO DE SERVICIO -->
+<script>
+function filterServicios(type) {
+  // Actualizar botones activos
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if(btn.getAttribute('data-filter') === type) {
+      btn.classList.add('active');
+    }
+  });
+  
+  // Filtrar tarjetas de servicios
+  const cards = document.querySelectorAll('.serv-card');
+  cards.forEach(card => {
+    if(type === 'all') {
+      card.classList.remove('hidden');
+    } else {
+      const cardType = card.getAttribute('data-type');
+      if(cardType === type) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    }
+  });
+}
+</script>
+<!-- FIN SCRIPT DE FILTRO -->
 
 </body>
 </html>
