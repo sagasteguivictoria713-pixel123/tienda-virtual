@@ -91,7 +91,7 @@ SERVICIOS = [
     },
     {
         "nombre": "YOUTUBE PREMIUN 12 MESES",
-        "tipo": "Cuenta Completa",
+        "tipo": "Perfil",
         "precio": 150.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Entregamos correo y contraseña listos para usar.\n✔ Disfruta videos y música sin anuncios.\n✔ Descarga contenido y míralo sin conexión.\n✔ Reproducción en segundo plano con YouTube Music Premium.",
@@ -115,7 +115,7 @@ SERVICIOS = [
     },
     {
         "nombre": "CANVA PRO",
-        "tipo": "Cuenta Completa",
+        "tipo": "Perfil",
         "precio": 3.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Millones de plantillas premium.\n✔ Herramientas de IA para diseño.\n✔ Fondo transparente y redimensionado mágico.\n✔ Recursos gráficos e imágenes premium.",
@@ -123,7 +123,7 @@ SERVICIOS = [
     },
     {
         "nombre": "CAPCUT PRO",
-        "tipo": "Cuenta Completa",
+        "tipo": "Perfil",
         "precio": 12.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Plantillas, efectos y recursos Premium exclusivos.\n✔ Herramientas avanzadas de IA para edición de video.\n✔ Exportación en 4K y videos sin marca de agua.\n✔ Edición en móvil, PC y web con almacenamiento en la nube.",
@@ -131,7 +131,7 @@ SERVICIOS = [
     },
     {
         "nombre": "MICROSOFT 365",
-        "tipo": "Cuenta Completa",
+        "tipo": "Perfil",
         "precio": 25.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Word, Excel, PowerPoint y Outlook incluidos.\n✔ Almacenamiento seguro en la nube con OneDrive.\n✔ Acceso desde PC, Mac, celular y tablet.\n✔ Herramientas de IA con Microsoft Copilot.",
@@ -139,7 +139,7 @@ SERVICIOS = [
     },
     {
         "nombre": "CHATGPT PLUS",
-        "tipo": "Cuenta Completa",
+        "tipo": "Perfil",
         "precio": 13.50,
         "entrega": "Entrega al instante",
         "desc": "✔ Se brinda correo y contraseña listo para usar.\n✔ Garantía por 30 días.\n✔ Acceso a modelos avanzados de razonamiento.\n✔ Creación de imágenes y análisis de archivos.",
@@ -147,7 +147,7 @@ SERVICIOS = [
     },
     {
         "nombre": "GEMINI PRO",
-        "tipo": "Cuenta Completa",
+        "tipo": "Perfil",
         "precio": 9.50,
         "entrega": "Entrega al instante",
         "desc": "✔ Se activa a tu correo.\n✔ Garantía por 30 días.\n✔ Acceso ampliado al modelo Gemini Pro.\n✔ IA integrada con Gmail, Docs y otras apps de Google.",
