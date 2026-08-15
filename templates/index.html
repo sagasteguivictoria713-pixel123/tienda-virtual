@@ -123,6 +123,7 @@ header{
 .promo-btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:14px 24px; border-radius:999px; background:linear-gradient(135deg,#57B98A 0%,#89DFC0 100%); color:#111; text-decoration:none; font-weight:700; transition:transform .18s;}
 .promo-btn:hover{transform:translateY(-2px);}
 @media(max-width:900px){ .promo-hero{grid-template-columns:1fr; } }
+@media(max-width:900px){ #pagina-web .wrap > div{grid-template-columns:1fr;} }
 .eyebrow{
   font-family:'Space Mono',monospace; font-size:0.78rem; letter-spacing:0.18em;
   color:rgba(79,255,209,0.95); text-transform:uppercase; margin-bottom:14px;
@@ -229,11 +230,11 @@ header{
     .serv-price{font-family:'Space Mono',monospace; font-size:1.3rem; color:var(--violet); font-weight:700;}
     .serv-meta{font-family:'Space Mono',monospace; font-size:0.7rem; color:#7a7a68; text-transform:uppercase; letter-spacing:0.05em; }
 .steps{display:flex; gap:20px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;}
-.step{background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:24px; padding:24px; flex:1 1 260px; min-width:220px; display:flex; flex-direction:column; align-items:center; text-align:center;}
-.step .num{font-family:'Space Mono',monospace; color:var(--coral); font-size:0.85rem; margin-bottom:12px;}
-.step h3{font-size:1.1rem; margin:6px 0 10px;}
-.step p{color:var(--muted); font-size:0.92rem; line-height:1.5;}
-.step-icon{width:64px; height:64px; margin-bottom:12px;}
+.step{background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:24px; padding:24px; flex:1 1 280px; min-height:420px; display:flex; flex-direction:column; align-items:center; text-align:center; justify-content:flex-start;}
+.step .num{font-family:'Space Mono',monospace; color:var(--coral); font-size:0.85rem; margin-bottom:12px; order:1;}
+.step h3{font-size:1.1rem; margin:0 0 12px; font-weight:700; order:2;}
+.step p{color:var(--muted); font-size:0.92rem; line-height:1.6; order:3; flex-grow:1; display:flex; align-items:center;}
+.step-icon{width:72px; height:72px; margin-bottom:16px; flex-shrink:0;}
 .step-icon img{width:100%; height:100%; object-fit:contain; border-radius:16px;}
 
 .testi-row{display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:22px;}
@@ -589,6 +590,21 @@ footer{padding:48px 24px 32px; border-top:1px solid var(--border); text-align:ce
       <a href="#servicios" class="btn btn-primary">Explorar servicios</a>
       <a href="#como-funciona" class="btn btn-ghost">Ver cómo funciona</a>
     </div>
+    <!-- INDICADORES DE CONFIANZA -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:24px; margin-top:40px; padding-top:32px; border-top:1px solid rgba(255,255,255,0.1);">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <div style="font-size:2rem; font-family:'Space Grotesk', sans-serif; font-weight:700; color:var(--violet);">+1</div>
+        <div style="font-size:0.9rem; color:var(--muted); text-align:center;">Año de servicio</div>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <div style="font-size:2rem; font-family:'Space Grotesk', sans-serif; font-weight:700; color:var(--coral);">+500</div>
+        <div style="font-size:0.9rem; color:var(--muted); text-align:center;">Clientes</div>
+      </div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <div style="font-size:2rem; font-family:'Space Grotesk', sans-serif; font-weight:700; color:var(--violet);">24/7</div>
+        <div style="font-size:0.9rem; color:var(--muted); text-align:center;">Soporte</div>
+      </div>
+    </div>
   </div>
   <div>
     <div class="hero-figure">
@@ -698,6 +714,14 @@ footer{padding:48px 24px 32px; border-top:1px solid var(--border); text-align:ce
         <h3>Recibe al instante</h3>
         <p>Te entregamos el servicio directamente por WhatsApp apenas confirmes el pago.</p>
       </div>
+      <div class="step">
+        <div class="step-icon">
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline><path d="M4 12 L20 6 L16 20 Z"></path></svg>
+        </div>
+        <div class="num">04</div>
+        <h3>Garantía 30 días</h3>
+        <p>Compra con tranquilidad. Cuentas con garantía de 30 días según las condiciones del servicio.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -727,6 +751,27 @@ footer{padding:48px 24px 32px; border-top:1px solid var(--border); text-align:ce
       <p>👉 ¿Desconfías? Mira Nuestras Referencias de Clientes Satisfechos en nuestro Canal:<br>
         <a href="https://whatsapp.com/channel/0029VbAv70YGOj9hiSPyBc1Q" target="_blank" rel="noopener">https://whatsapp.com/channel/0029VbAv70YGOj9hiSPyBc1Q</a>
       </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pagina-web" style="background: linear-gradient(135deg, rgba(73,226,182,0.08) 0%, rgba(79,255,209,0.05) 100%); border-top: 1px solid rgba(73,226,182,0.2);">
+  <div class="wrap">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div class="eyebrow">Desarrollo web</div>
+        <h2 style="font-size:2.2rem; margin-bottom:16px;">¿Deseas una página web como esta para tu emprendimiento?</h2>
+        <p style="font-size:1.05rem; color:rgba(243,236,216,0.9); margin-bottom:24px; line-height:1.7;">Creamos páginas web profesionales, modernas y optimizadas especialmente diseñadas para emprendimientos y negocios. Presencia online que convierte visitantes en clientes.</p>
+        <a href="https://wa.me/51924481118?text=Estoy%20interesado%20en%20una%20p%C3%A1gina%20web%20para%20mi%20emprendimiento%2C%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener" class="btn btn-primary" style="display:inline-flex;">Más información</a>
+      </div>
+      <div style="display:flex; justify-content:center; align-items:center;">
+        <div style="width:100%; height:300px; background:rgba(255,255,255,0.08); border:1.5px solid rgba(73,226,182,0.3); border-radius:24px; display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:0.95rem; text-align:center; padding:24px;">
+          <div>
+            <div style="font-size:2.5rem; margin-bottom:12px;">🌐</div>
+            <div>Sitios web profesionales para tu negocio</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -945,9 +990,10 @@ function confirmPayment(){
   window.location.href = waUrl;
 }
 
-const waLink = `https://wa.me/${NEGOCIO.whatsapp}?text=${encodeURIComponent('Hola, quiero más información')}`;
+const waLink = 'https://chat.whatsapp.com/GVfDBzEPBrcLa2cy8QGUhW?s=cl&p=a&mlu=0';
 document.getElementById('wa-float').href = waLink;
-document.getElementById('foot-wa').href = waLink;
+const footWaLink = `https://wa.me/${NEGOCIO.whatsapp}?text=${encodeURIComponent('Hola, quiero más información')}`;
+document.getElementById('foot-wa').href = footWaLink;
 
 document.querySelectorAll('.qty-btn').forEach(btn => {
   btn.addEventListener('click', () => updateQuantity(Number(btn.dataset.i), btn.dataset.op === 'inc' ? 1 : -1));
