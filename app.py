@@ -211,6 +211,36 @@ SERVICIOS = [
         "entrega": "Entrega al instante",
         "desc": "✔ Hasta 5 dispositivos.\n✔ Garantía por 30 días.\n✔ Acceso a modelos avanzados de razonamiento.\n✔ Creación de imágenes y análisis de archivos.",
         "imagen": "images/chatgpt.png",
+    },
+    # ======================================================================
+    # SERVICIOS ADICIONALES: OTROS
+    # ======================================================================
+    {
+        "nombre": "ASESORÍA DE TESIS",
+        "tipo": "otros",
+        "sin_carrito": True,
+        "entrega": "Consulta por WhatsApp",
+        "desc": "✔ Levantamiento de observaciones y análisis estadístico.\n✔ Redacción de tesis bajo normas APA y Vancouver.\n✔ Asesoría y elaboración de artículos científicos.\n✔ +3 años de experiencia y participación en más de 50 tesis.",
+        "imagen": "images/tesis.png",
+        "whatsapp_msg": "Estoy interesado en el servicio de Asesoría de Tesis, deseo más información.",
+    },
+    {
+        "nombre": "BÚSQUEDA DE INFORMACIÓN",
+        "tipo": "otros",
+        "sin_carrito": True,
+        "entrega": "Consulta por WhatsApp",
+        "desc": "✔ Consulta vehicular.\n✔ Consulta de árbol genealógico.\n✔ Duplicados de documentos en PDF.\n✔ Consulta de números virtuales.",
+        "imagen": "images/busqueda.png",
+        "whatsapp_msg": "Estoy interesado en el servicio de Búsqueda de Información, deseo más información.",
+    },
+    {
+        "nombre": "CELULARES SELLADOS",
+        "tipo": "otros",
+        "sin_carrito": True,
+        "entrega": "Consulta por WhatsApp",
+        "desc": "✔ Celulares nuevos, sellados y en caja.\n✔ Delivery y entrega en toda Arequipa.\n✔ Samsung, Xiaomi, Redmi, POCO, Honor, Motorola, Infinix, ZTE, iPhone y más.\n✔ Excelente relación calidad-precio.",
+        "imagen": "images/celulares.png",
+        "whatsapp_msg": "Estoy interesado en comprar un celular sellado. Deseo más información sobre modelos, precios y stock disponible.",
     }
 ]
 

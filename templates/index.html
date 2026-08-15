@@ -225,6 +225,8 @@ header{
 .serv-actions{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; width:100%; justify-content:space-between; margin-top:0; }
 .serv-foot .serv-buy{ background:#7d3cff; color:#fff; padding:10px 16px; border-radius:28px; font-weight:800; text-align:center; min-width:140px; text-transform:uppercase; }
 .serv-foot .serv-buy:hover{ background:#5b1cf2; }
+.serv-foot .serv-info-btn{ background:linear-gradient(135deg, var(--violet) 0%, #79d4c1 100%); color:#fff; padding:12px 20px; border-radius:28px; font-weight:800; text-align:center; width:100%; text-transform:uppercase; cursor:pointer; border:none; font-size:0.95rem; transition:all 0.3s ease; }
+.serv-foot .serv-info-btn:hover{ background:linear-gradient(135deg, #3cc9a8 0%, #49e2b6 100%); box-shadow:0 8px 20px rgba(73,226,182,0.4); transform:translateY(-2px); }
 .serv-name{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.12rem; margin-top:6px;}
 .serv-desc{font-size:0.88rem; color:#4a4a3e; flex-grow:1;}
     .serv-price{font-family:'Space Mono',monospace; font-size:1.3rem; color:var(--violet); font-weight:700;}
@@ -713,6 +715,9 @@ footer{padding:40px 24px 28px; border-top:1px solid var(--border); text-align:ce
       <button class="tab-btn" data-filter="cuenta_completa" onclick="filterServicios('cuenta_completa')">
         Cuentas Completas
       </button>
+      <button class="tab-btn" data-filter="otros" onclick="filterServicios('otros')">
+        Otros
+      </button>
     </div>
     <!-- FIN PESTAÑAS -->
     <div class="servicios-grid" id="servicios-grid">
@@ -734,6 +739,9 @@ footer{padding:40px 24px 28px; border-top:1px solid var(--border); text-align:ce
 
         <div class="serv-foot">
           <div class="serv-desc">{{ s.desc | replace('\n', '<br>') | safe }}</div>
+          
+          {% if not s.get('sin_carrito', False) %}
+          <!-- PRODUCTOS CON CARRITO -->
           <div class="serv-quantity">
             <button class="qty-btn" data-i="{{ loop.index0 }}" data-op="dec">−</button>
             <span class="qty-value" id="qty-{{ loop.index0 }}">1</span>
@@ -743,6 +751,12 @@ footer{padding:40px 24px 28px; border-top:1px solid var(--border); text-align:ce
             <div class="price-big">S/ {{ "%.2f"|format(s.precio) }}</div>
             <button class="serv-buy" data-i="{{ loop.index0 }}">Añadir +</button>
           </div>
+          {% else %}
+          <!-- PRODUCTOS SIN CARRITO (Otros) -->
+          <div class="serv-actions" style="margin-top: auto;">
+            <button class="serv-info-btn" onclick="openWhatsAppInfo('{{ s.nombre }}', '{{ s.whatsapp_msg }}')">MÁS INFORMACIÓN</button>
+          </div>
+          {% endif %}
         </div>
       </div>
       {% endfor %}
@@ -962,6 +976,12 @@ function getWhatsAppLink(){
   const lines = cart.map(item => `${item.quantity}× ${item.servicio.nombre} (${money(item.servicio.precio)})`).join('\n');
   const message = `Hola, ya realicé el pago por los siguientes servicios por la página web:\n${lines}\nTotal: ${money(total)}\n\nNombre para su perfil:\nNOTA: adjuntar comprobante de pago.`;
   return `https://wa.me/${NEGOCIO.whatsapp}?text=${encodeURIComponent(message)}`;
+}
+
+// Abrir WhatsApp para servicios sin carrito (Otros)
+function openWhatsAppInfo(servicioNombre, mensaje){
+  const waLink = `https://wa.me/${NEGOCIO.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+  window.open(waLink, '_blank');
 }
 
 function addToCart(index){
