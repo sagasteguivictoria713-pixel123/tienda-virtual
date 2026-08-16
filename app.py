@@ -35,7 +35,7 @@ SERVICIOS = [
     {
         "nombre": "NETFLIX PREMIUN",
         "tipo": "perfil",
-        "precio": 14.50,
+        "precio": 15.00,
         "entrega": "Entrega al instante",
         "desc": "✔ Películas, series y producciones exclusivas de Netflix.\n✔ Descarga tus títulos favoritos y míralos sin conexión.\n✔ Calidad de video hasta 4K Ultra HD + HDR.",
         "imagen": "images/netflix1.jpg",
