@@ -37,7 +37,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 14.50,
         "entrega": "Entrega al instante",
-        "desc": "✔ Películas, series y producciones exclusivas de Netflix.\n✔ Descarga tus títulos favoritos y míralos sin conexión.\n✔ Calidad de video hasta 4K Ultra HD + HDR.\n✔ Audio espacial disponible en títulos compatibles.",
+        "desc": "✔ Películas, series y producciones exclusivas de Netflix.\n✔ Descarga tus títulos favoritos y míralos sin conexión.\n✔ Calidad de video hasta 4K Ultra HD + HDR.",
         "imagen": "images/netflix1.jpg",
         "use_as_background": True,
     },
@@ -46,7 +46,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 9.50,
         "entrega": "Entrega al instante",
-        "desc": "✔ Canales de ESPN y deportes en vivo.\n✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Calidad de video hasta 4K UHD y HDR.\n✔ Descarga contenido para verlo sin conexión.",
+        "desc": "✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Calidad de video hasta 4K UHD y HDR.\n✔ Descarga contenido para verlo sin conexión.",
         "imagen": "images/disneypremiun.jpg",
     },
     {
@@ -54,7 +54,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 7.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Descarga contenido y disfruta sin conexión.\n✔ Calidad de video hasta Full HD 1080p.\n✔ No incluye los canales de ESPN disponibles en Disney+ Premium.",
+        "desc": "✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Descarga contenido y disfruta sin conexión.\n✔ Calidad de video hasta Full HD 1080p.",
         "imagen": "images/disneystandard.jpg",
     },
     {
@@ -62,7 +62,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 5.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Películas, series y producciones Amazon Original.\n✔ Descarga contenido y disfruta sin conexión.\n✔ Video HD y Ultra HD en dispositivos compatibles.\n✔ Disponible en Smart TV, celular, tablet y computadora.",
+        "desc": "✔ Películas, series y producciones Amazon Original.\n✔ Descarga contenido y disfruta sin conexión.\n✔ Video HD y Ultra HD en dispositivos compatibles.",
         "imagen": "images/primevideo.jpg",
     },
     {
@@ -70,7 +70,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 6.50,
         "entrega": "Entrega al instante",
-        "desc": "✔ Series originales de HBO.\n✔ Películas taquilleras.\n✔ Universo DC y Warner Bros.\n✔ Estrenos exclusivos.",
+        "desc": "✔ Series originales de HBO.\n✔ Películas taquilleras.\n✔ Estrenos exclusivos.",
         "imagen": "images/hbo.jpg",
     },
     {
@@ -78,7 +78,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 5.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Miles de episodios de anime.\n✔ Estrenos en simulcast.\n✔ Subtítulos en español.\n✔ Amplio catálogo de anime.",
+        "desc": "✔ Miles de episodios de anime.\n✔ Estrenos en simulcast.\n✔ Subtítulos en español.",
         "imagen": "images/CRUNCHYROLL1.png",
     },
     {
@@ -86,7 +86,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 9.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Música sin anuncios.\n✔ Descargas para escuchar sin internet.\n✔ Saltos ilimitados.\n✔ Máxima calidad de audio.",
+        "desc": "✔ Música sin anuncios.\n✔ Descargas para escuchar sin internet.\n✔ Máxima calidad de audio.",
         "imagen": "images/spotify1.png",
     },
     {
@@ -94,7 +94,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 150.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Entregamos correo y contraseña listos para usar.\n✔ Disfruta videos y música sin anuncios.\n✔ Descarga contenido y míralo sin conexión.\n✔ Reproducción en fondo + YouTube Music Premium.",
+        "desc": "✔ Entregamos correo y contraseña listos para usar.\n✔ Disfruta videos y música sin anuncios.\n✔ Descarga contenido y míralo sin conexión.",
         "imagen": "images/youtube.jpg",
     },
     {
@@ -102,7 +102,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 3.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Series y películas en español.\n✔ Deportes en vivo (según disponibilidad).\n✔ Novelas y contenido exclusivo.\n✔ Sin anuncios en contenido Premium.",
+        "desc": "✔ Series y películas en español.\n✔ Deportes en vivo (según disponibilidad).\n✔ Sin anuncios en contenido Premium.",
         "imagen": "images/VIX PREMIUN.jpg",
     },
     {
@@ -110,7 +110,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 8.50,
         "entrega": "Entrega al instante",
-        "desc": "✔ Películas taquilleras y series originales.\n✔ Contenido de Nickelodeon, MTV, Comedy Central y más.\n✔ Mira en TV, celular, tablet y computadora.\n✔ Descarga títulos y disfruta sin conexión.",
+        "desc": "✔ Películas taquilleras y series originales.\n✔ Mira en TV, celular, tablet y computadora.\n✔ Descarga títulos y disfruta sin conexión.",
         "imagen": "images/paramount.jpg",
     },
     {
@@ -118,7 +118,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 3.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Millones de plantillas premium.\n✔ Herramientas de IA para diseño.\n✔ Fondo transparente y redimensionado mágico.\n✔ Recursos gráficos e imágenes premium.",
+        "desc": "✔ Millones de plantillas premium.\n✔ Herramientas de IA para diseño.\n✔ Fondo transparente y redimensionado mágico.",
         "imagen": "images/canva1.png",
     },
     {
@@ -126,7 +126,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 12.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Plantillas, efectos y recursos Premium exclusivos.\n✔ Herramientas avanzadas de IA para edición de video.\n✔ Exportación en 4K y videos sin marca de agua.\n✔ Edición en móvil, PC, web + almacenamiento nube.",
+        "desc": "✔ Plantillas, efectos y recursos Premium exclusivos.\n✔ Herramientas avanzadas de IA para edición de video.\n✔ Exportación en 4K y videos sin marca de agua.",
         "imagen": "images/capcutpro.jpg",
     },
     {
@@ -134,7 +134,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 25.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Word, Excel, PowerPoint y Outlook incluidos.\n✔ Almacenamiento en la nube (OneDrive).\n✔ Acceso desde PC, Mac, celular y tablet.\n✔ Herramientas de IA con Microsoft Copilot.",
+        "desc": "✔ Word, Excel, PowerPoint y Outlook incluidos.\n✔ Almacenamiento en la nube (OneDrive).\n✔ Acceso desde PC, Mac, celular y tablet.",
         "imagen": "images/microsoft365.jpg",
     },
     {
@@ -142,7 +142,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 13.50,
         "entrega": "Entrega al instante",
-        "desc": "✔ Se brinda correo y contraseña listo para usar.\n✔ Garantía por 30 días.\n✔ Acceso a modelos avanzados de razonamiento.\n✔ Creación de imágenes y análisis de archivos.",
+        "desc": "✔ Se brinda correo y contraseña listo para usar.\n✔ Garantía por 30 días.\n✔ Acceso a modelos avanzados de razonamiento.",
         "imagen": "images/chatgpt.png",
     },
     {
@@ -150,7 +150,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 9.50,
         "entrega": "Entrega al instante",
-        "desc": "✔ Se activa a tu correo.\n✔ Garantía por 30 días.\n✔ Acceso ampliado al modelo Gemini Pro.\n✔ IA integrada con Gmail, Docs y otras apps de Google.",
+        "desc": "✔ Se activa a tu correo.\n✔ Garantía por 30 días.\n✔ Acceso ampliado al modelo Gemini Pro.",
         "imagen": "images/geminipro1.jpg",
     },
     # ======================================================================
@@ -161,7 +161,7 @@ SERVICIOS = [
         "tipo": "cuenta_completa",
         "precio": 35.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ 7 perfiles / 4 simultáneos.\n✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Calidad de video hasta 4K UHD y HDR.\n✔ Descarga contenido para verlo sin conexión.",
+        "desc": "✔ 7 perfiles / 4 simultáneos.\n✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Calidad de video hasta 4K UHD y HDR.",
         "imagen": "images/disneypremiun.jpg",
     },
     {
@@ -169,7 +169,7 @@ SERVICIOS = [
         "tipo": "cuenta_completa",
         "precio": 15.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ 6 perfiles / 3 simultáneos.\n✔ Descarga contenido y disfruta sin conexión.\n✔ Video HD y Ultra HD en dispositivos compatibles.\n✔ Disponible en Smart TV, celular, tablet y computadora.",
+        "desc": "✔ 6 perfiles / 3 simultáneos.\n✔ Descarga contenido y disfruta sin conexión.\n✔ Video HD y Ultra HD en dispositivos compatibles.",
         "imagen": "images/primevideo.jpg",
     },
     {
@@ -177,7 +177,7 @@ SERVICIOS = [
         "tipo": "cuenta_completa",
         "precio": 26.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ 5 perfiles / 4 simultáneos.\n✔ Películas taquilleras.\n✔ Universo DC y Warner Bros.\n✔ Estrenos exclusivos.",
+        "desc": "✔ 5 perfiles / 4 simultáneos.\n✔ Películas taquilleras.\n✔ Estrenos exclusivos.",
         "imagen": "images/hbo.jpg",
     },
     {
@@ -185,7 +185,7 @@ SERVICIOS = [
         "tipo": "cuenta_completa",
         "precio": 15.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ 5 perfiles / 4 simultáneos.\n✔ Estrenos en simulcast.\n✔ Subtítulos en español.\n✔ Amplio catálogo de anime.",
+        "desc": "✔ 5 perfiles / 4 simultáneos.\n✔ Estrenos en simulcast.\n✔ Subtítulos en español.",
         "imagen": "images/CRUNCHYROLL1.png",
     },
     {
@@ -193,7 +193,7 @@ SERVICIOS = [
         "tipo": "cuenta_completa",
         "precio": 10.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ 5 perfiles.\n✔ Deportes en vivo (según disponibilidad).\n✔ Novelas y contenido exclusivo.\n✔ Sin anuncios en contenido Premium.",
+        "desc": "✔ 5 perfiles.\n✔ Deportes en vivo (según disponibilidad).\n✔ Sin anuncios en contenido Premium.",
         "imagen": "images/VIX PREMIUN.jpg",
     },
     {
@@ -201,7 +201,7 @@ SERVICIOS = [
         "tipo": "cuenta_completa",
         "precio": 20.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Hasta 2 dispositivos.\n✔ Herramientas avanzadas de IA para edición de video.\n✔ Exportación en 4K y videos sin marca de agua.\n✔ Edición en móvil, PC, web + almacenamiento nube.",
+        "desc": "✔ Hasta 2 dispositivos.\n✔ Herramientas avanzadas de IA para edición de video.\n✔ Exportación en 4K y videos sin marca de agua.",
         "imagen": "images/capcutpro.jpg",
     },
     {
@@ -209,7 +209,7 @@ SERVICIOS = [
         "tipo": "cuenta_completa",
         "precio": 45.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Hasta 5 dispositivos.\n✔ Garantía por 30 días.\n✔ Acceso a modelos avanzados de razonamiento.\n✔ Creación de imágenes y análisis de archivos.",
+        "desc": "✔ Hasta 5 dispositivos.\n✔ Garantía por 30 días.\n✔ Acceso a modelos avanzados de razonamiento.",
         "imagen": "images/chatgpt.png",
     },
     # ======================================================================
@@ -220,8 +220,8 @@ SERVICIOS = [
         "tipo": "otros",
         "sin_carrito": True,
         "entrega": "Consulta por WhatsApp",
-        "desc": "✔ Levantamiento de observaciones y análisis estadístico.\n✔ Redacción de tesis bajo normas APA y Vancouver.\n✔ Asesoría y elaboración de artículos científicos.\n✔ +3 años de experiencia y participación en más de 50 tesis.",
-        "imagen": "images/tesis.png",
+        "desc": "✔ Levantamiento de observaciones y análisis estadístico.\n✔ Redacción de tesis bajo normas APA y Vancouver.\n✔ +3 años de experiencia y participación en más de 50 tesis.",
+        "imagen": "images/tesisf.jpg",
         "whatsapp_msg": "Estoy interesado en el servicio de Asesoría de Tesis, deseo más información.",
     },
     {
@@ -229,8 +229,8 @@ SERVICIOS = [
         "tipo": "otros",
         "sin_carrito": True,
         "entrega": "Consulta por WhatsApp",
-        "desc": "✔ Consulta vehicular.\n✔ Consulta de árbol genealógico.\n✔ Duplicados de documentos en PDF.\n✔ Consulta de números virtuales.",
-        "imagen": "images/busqueda.png",
+        "desc": "✔ Consulta vehicular.\n✔ Consulta de árbol genealógico.\n✔ Duplicados de documentos en PDF.",
+        "imagen": "images/busqueda.jpg",
         "whatsapp_msg": "Estoy interesado en el servicio de Búsqueda de Información, deseo más información.",
     },
     {
@@ -238,9 +238,21 @@ SERVICIOS = [
         "tipo": "otros",
         "sin_carrito": True,
         "entrega": "Consulta por WhatsApp",
-        "desc": "✔ Celulares nuevos, sellados y en caja.\n✔ Delivery y entrega en toda Arequipa.\n✔ Samsung, Xiaomi, Redmi, POCO, Honor, Motorola, Infinix, ZTE, iPhone y más.\n✔ Excelente relación calidad-precio.",
-        "imagen": "images/celulares.png",
+        "desc": "✔ Celulares nuevos, sellados y en caja.\n✔ Delivery y entrega en toda Arequipa.\n✔ Excelente relación calidad-precio.",
+        "imagen": "images/cellf.jpg",
         "whatsapp_msg": "Estoy interesado en comprar un celular sellado. Deseo más información sobre modelos, precios y stock disponible.",
+    },
+    # ======================================================================
+    # COMBOS PERSONALIZADOS
+    # ======================================================================
+    {
+        "nombre": "COMBOS PERSONALIZADOS",
+        "tipo": "combos",
+        "sin_carrito": True,
+        "entrega": "Consulta por WhatsApp",
+        "desc": "✔ Arma tus dúos, tríos y mucha más Aplicaciones.\n✔ Recibe descuentos por llevar combos.\n✔ Licencias Renovables Mensuales.\n✔ Soporte y Garantía Constante.",
+        "imagen": "images/combo.jpg",
+        "whatsapp_msg": "Hola, estoy interesado(a) en armar un combo personalizado. Deseo las siguientes aplicaciones de streaming y acceder al descuento correspondiente. Estas son las apps que me interesan: ",
     }
 ]
 
