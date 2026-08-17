@@ -137,7 +137,7 @@ header{
 
 .hero{
   position:relative;
-  padding:64px 24px 48px;
+  padding:20px 24px 48px;
   display:grid; grid-template-columns:1.1fr 0.9fr; gap:32px; align-items:center;
 }
 .hero > *{position:relative; z-index:1;}
@@ -162,7 +162,7 @@ header{
 .hero-stat .label{font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-top:6px;}
 @media (max-width:880px){ .hero{grid-template-columns:1fr; padding-top:56px;} .hero-figure{order:-1; max-width:260px; margin:0 auto 12px;} }
 @media (max-width:768px){
-  .hero{padding:48px 16px 36px;}
+  .hero{padding:20px 16px 36px;}
   .hero h1{font-size:clamp(2rem, 7vw, 2.8rem);}
   .hero p{font-size:0.95rem;}
   .hero-stats{gap:18px 24px;}
@@ -175,6 +175,29 @@ header{
   .hero-stat .label{line-height:1.35;}
   .cta-row{flex-direction:column;}
   .btn{width:100%; justify-content:center;}
+}
+
+.promo-marquee-wrap{
+  position:relative; width:100vw; margin-left:calc(50% - 50vw); margin-bottom:4px; overflow:hidden; border-top:1px solid rgba(255,255,255,0.08); border-bottom:1px solid rgba(255,255,255,0.08);
+  background:linear-gradient(90deg, rgba(87,185,138,0.10), rgba(73,226,182,0.16), rgba(87,185,138,0.10));
+  box-shadow:0 0 28px rgba(73,226,182,0.14), inset 0 0 22px rgba(73,226,182,0.10);
+  animation:promoGlow 4s ease-in-out infinite alternate;
+}
+.promo-marquee-track{
+  display:flex; align-items:center; white-space:nowrap; width:max-content; min-width:100%; gap:28px; padding:12px 0; animation:promoScroll 26s linear infinite;
+}
+.promo-marquee-item{
+  display:inline-flex; align-items:center; padding:0 10px; font-size:0.88rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#f3f7ff; opacity:0.96;
+}
+@keyframes promoScroll{
+  0%{transform:translateX(0);} 100%{transform:translateX(-50%);}
+}
+@keyframes promoGlow{
+  0%{box-shadow:0 0 18px rgba(73,226,182,0.12), inset 0 0 18px rgba(73,226,182,0.06);} 50%{box-shadow:0 0 28px rgba(73,226,182,0.22), inset 0 0 26px rgba(73,226,182,0.12);} 100%{box-shadow:0 0 18px rgba(73,226,182,0.12), inset 0 0 18px rgba(73,226,182,0.06);} 
+}
+@media (max-width:768px){
+  .promo-marquee-item{font-size:0.72rem; letter-spacing:0.04em;}
+  .promo-marquee-track{padding:10px 0; gap:18px;}
 }
 .promo-hero{display:grid; grid-template-columns:1.08fr 1fr; gap:28px; align-items:stretch; padding:56px 0 20px; border-top:1px solid var(--border);}
 .promo-hero .promo-img{display:flex; height:100%;}
@@ -370,6 +393,17 @@ header{
   font-weight:700;
   font-family:'Space Mono', monospace;
   white-space:nowrap;
+}
+.netflix-main-availability-row{
+  display:flex;
+  justify-content:flex-end;
+  width:100%;
+  margin-top:auto;
+}
+.netflix-main-availability-row .stock-badge{
+  display:inline-flex;
+  align-items:center;
+  margin-left:auto;
 }
 .price-big{
   font-family:'Space Mono',monospace;
@@ -568,6 +602,7 @@ header{
   background:var(--paper); color:var(--ink); border-radius:10px; max-width:420px; width:100%;
   padding:28px 26px 26px; position:relative; max-height:92vh; overflow-y:auto;
 }
+body.modal-open{overflow:hidden; touch-action:none;}
 .modal-close{position:absolute; top:14px; right:16px; background:none; font-size:1.3rem; color:#6b6b5c;}
 .modal h3{font-size:1.2rem; margin-bottom:4px;}
 .modal .price{font-family:'Space Mono',monospace; color:var(--violet); font-size:1.4rem; font-weight:700; margin-bottom:14px;}
@@ -578,6 +613,53 @@ header{
   margin:0 auto 18px;
   border-radius:18px;
   box-shadow:0 18px 50px -28px rgba(0,0,0,0.4);
+}
+.netflix-modal{
+  max-width:980px; width:min(980px, 100%); background:linear-gradient(180deg, rgba(12, 14, 17, 0.96), rgba(16, 20, 25, 0.96));
+  border:1px solid rgba(255,255,255,0.08); border-radius:26px; box-shadow:0 30px 80px rgba(0,0,0,0.5);
+  padding:0; position:relative; overflow:hidden;
+}
+.netflix-modal-shell{
+  display:grid; grid-template-columns: 1.1fr 1.5fr; min-height:560px;
+}
+.netflix-modal-left{
+  background:linear-gradient(180deg, rgba(226, 9, 19, 0.06), rgba(9, 11, 14, 0.2));
+  padding:34px 28px 28px; border-right:1px solid rgba(255,255,255,0.08); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+}
+.netflix-modal-left img{width:min(260px,100%); height:180px; object-fit:cover; border-radius:18px; background:#111; box-shadow:0 18px 40px rgba(0,0,0,0.4); margin-bottom:22px;}
+.netflix-modal-left h3{font-size:clamp(1.5rem, 2vw, 2.2rem); margin:0 0 10px; letter-spacing:0.08em; color:#fff;}
+.netflix-modal-left p{margin:0; color:rgba(255,255,255,0.8); font-size:1.04rem; letter-spacing:0.02em;}
+.netflix-modal-right{padding:30px 28px 26px; display:flex; flex-direction:column; justify-content:center;}
+.netflix-modal-right-grid{display:grid; grid-template-columns:1fr; gap:18px;}
+.netflix-option-card{background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:18px; padding:22px 20px; display:flex; flex-direction:column; gap:14px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease, filter .25s ease;}
+.netflix-option-card:hover{transform:translateY(-4px); border-color:rgba(126,240,255,0.42); box-shadow:0 18px 32px rgba(126,240,255,0.12), 0 0 0 1px rgba(126,240,255,0.12); filter:brightness(1.04);}
+.netflix-option-card h4{margin:0; font-size:1.08rem; color:#fff;}
+.netflix-option-header{display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0;}
+.netflix-option-card .price{margin:0; font-size:1.55rem; color:#f3f3f3; font-weight:700; font-family:'Space Mono', monospace; line-height:1.2;}
+.netflix-availability{display:inline-flex; align-items:center; font-size:0.76rem; color:#7ef0ff; font-weight:700; font-family:'Space Mono', monospace; letter-spacing:0.04em; white-space:nowrap; margin-right:2px;}
+.netflix-option-card ul{margin:0; padding-left:20px; color:rgba(255,255,255,0.78); font-size:0.95rem; line-height:1.7;}
+.netflix-option-card button{margin-top:auto; width:100%; border:none; border-radius:12px; padding:12px 18px; background:#E50914; color:white; font-weight:700; cursor:pointer;}
+.netflix-option-card button:hover{filter:brightness(1.06);} 
+.netflix-modal-footer{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:18px;}
+.netflix-modal-footer .btn-ghost{width:auto; background:rgba(255,255,255,0.06); color:#fff; border:1px solid rgba(255,255,255,0.1);}
+.netflix-modal-close{position:absolute; top:18px; right:18px; background:none; border:none; color:rgba(255,255,255,0.8); font-size:1.5rem; cursor:pointer;}
+@media (max-width:900px){
+  .netflix-modal-shell{grid-template-columns:1fr;}
+  .netflix-modal-left{border-right:none; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:22px;}
+}
+@media (max-width:560px){
+  body.modal-open{overflow:hidden;}
+  .overlay{padding:12px; align-items:flex-start;}
+  .netflix-modal{
+    max-height:calc(100dvh - 24px); height:auto; overflow-y:auto; overflow-x:hidden; overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch; touch-action:pan-y;
+  }
+  .netflix-modal-shell{grid-template-columns:1fr; min-height:auto;}
+  .netflix-modal-right{padding:22px 18px 20px;}
+  .netflix-modal-left{padding:26px 18px 20px;}
+  .netflix-option-card{padding:18px 16px;}
+  .netflix-modal-footer{flex-direction:column; }
+  .netflix-modal-footer .btn-ghost, .netflix-modal-footer .btn-primary{width:100%;}
 }
 .modal-actions{display:flex; flex-direction:column; gap:12px;}
 .pay-instructions{background:rgba(255,255,255,0.9); border:1px solid rgba(27,27,22,0.1); border-radius:16px; padding:18px; color:#3c3c30; margin:14px 0 20px;}
@@ -948,13 +1030,17 @@ header{
       <div class="currency-flag"></div>
       <span class="currency-text">PEN</span>
     </div>
-    <div class="cart-indicator" id="cart-indicator" aria-label="Carrito de compras">
+    <div class="cart-indicator" id="cart-indicator" aria-label="Carrito de compras" role="button" tabindex="0">
       <span class="cart-icon">🛒</span>
       <span class="cart-label">Carrito</span>
       <span class="cart-count" id="cart-count">0</span>
     </div>
   </div>
 </header>
+
+<div class="promo-marquee-wrap" aria-live="polite">
+  <div class="promo-marquee-track" id="promo-marquee-track"></div>
+</div>
 
 <section class="hero wrap">
   <div>
@@ -1055,6 +1141,15 @@ header{
           
           {% if not s.get('sin_carrito', False) %}
           <!-- PRODUCTOS CON CARRITO -->
+          {% if s.nombre == 'NETFLIX PREMIUN' %}
+          <div class="netflix-main-availability-row">
+            <span class="stock-badge">● Disponible</span>
+          </div>
+          <div class="serv-actions">
+            <div class="price-big">S/ {{ "%.2f"|format(s.precio) }}</div>
+            <button class="serv-buy netflix-variant-btn" type="button" data-name="{{ s.nombre }}" data-price="{{ s.precio }}">Ver opciones</button>
+          </div>
+          {% else %}
           <div class="qty-row">
             <div class="serv-quantity">
               <button class="qty-btn" data-i="{{ loop.index0 }}" data-op="dec">−</button>
@@ -1067,6 +1162,7 @@ header{
             <div class="price-big">S/ {{ "%.2f"|format(s.precio) }}</div>
             <button class="serv-buy" data-i="{{ loop.index0 }}">Añadir +</button>
           </div>
+          {% endif %}
           {% else %}
           <!-- PRODUCTOS SIN CARRITO (Otros) -->
           <div class="serv-actions" style="margin-top: auto;">
@@ -1218,11 +1314,159 @@ header{
   </div>
 </div>
 
+<div class="overlay" id="netflix-variant-overlay" aria-hidden="true">
+  <div class="modal netflix-modal" role="dialog" aria-modal="true" aria-labelledby="netflix-modal-title">
+    <button class="netflix-modal-close" id="netflix-modal-close" aria-label="Cerrar">✕</button>
+    <div class="netflix-modal-shell">
+      <div class="netflix-modal-left">
+        <img src="{{ url_for('static', filename='images/netflix1.jpg') }}" alt="Netflix Premium">
+        <h3 id="netflix-modal-title">NETFLIX PREMIUM</h3>
+        <p>Escoge tu tipo de acceso</p>
+      </div>
+      <div class="netflix-modal-right">
+        <div class="netflix-modal-right-grid">
+          <div class="netflix-option-card">
+            <h4>Netflix Acceso Económico</h4>
+            <div class="netflix-option-header">
+              <p class="price">S/ 14.50</p>
+              <span class="netflix-availability">● Disponible</span>
+            </div>
+            <ul>
+              <li>1 dispositivo a vincular.</li>
+              <li>Acceso mediante código de 4 dígitos.</li>
+            </ul>
+            <button class="netflix-option-btn" data-netflix-option="economico" type="button">Añadir</button>
+          </div>
+          <div class="netflix-option-card">
+            <h4>Netflix Acceso VIP</h4>
+            <div class="netflix-option-header">
+              <p class="price">S/ 16.50</p>
+              <span class="netflix-availability">● Disponible</span>
+            </div>
+            <ul>
+              <li>Hasta 2 dispositivos a vincular.</li>
+              <li>Una pantalla reproduciendo contenido a la vez.</li>
+              <li>Acceso mediante correo y contraseña.</li>
+            </ul>
+            <button class="netflix-option-btn" data-netflix-option="vip" type="button">Añadir</button>
+          </div>
+        </div>
+        <div class="netflix-modal-footer">
+          <button class="btn btn-ghost" id="netflix-modal-back" type="button">← Regresar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 const NEGOCIO = {{ negocio_json|safe }};
 const SERVICIOS = {{ servicios_json|safe }};
 const selectedQty = SERVICIOS.map(() => 1);
 const cart = [];
+const PROMO_CONFIG = {
+  startDate: '2026-08-16',
+  endDate: '2026-08-23',
+  headline: '🔥 PROMOCIÓN ACTIVA — Del 16 al 23 de agosto, compra cualquier membresía mensual desde nuestra página web y recibe 35 días por el precio de 30. 🚀',
+  messages: [
+    '⚡ Activación inmediata en la mayoría de nuestros servicios.',
+    '💬 Soporte y atención todos los días.',
+    '🛒 Compra rápida, fácil y segura desde nuestra página web.',
+    '🎁 Promociones exclusivas para compras realizadas desde la web.'
+  ]
+};
+const NETFLIX_VARIANTS = {
+  economico: {
+    name: 'Netflix Acceso Económico',
+    price: 14.50,
+    devices: '1',
+    message: '✅ Hola, realicé el pago por:\n1× Netflix Acceso Económico — S/ 14.50\nTotal: S/ 14.50\n\n👤 Nombre para el perfil:\n📱 1 dispositivo a vincular:\n📎 Adjuntar comprobante de pago.\n\n✅ Una vez enviados estos datos, procederemos con la activación del servicio.'
+  },
+  vip: {
+    name: 'Netflix Acceso VIP',
+    price: 16.50,
+    devices: '2',
+    message: '✅ Hola, realicé el pago por:\n1× Netflix Acceso VIP — S/ 16.50\nTotal: S/ 16.50\n\n👤 Nombre para el perfil:\n📱 2 dispositivos a vincular:\n📎 Adjuntar comprobante de pago.\n\n✅ Una vez enviados estos datos, procederemos con la activación del servicio.'
+  }
+};
+
+function setBodyScrollLocked(locked){
+  document.body.classList.toggle('modal-open', locked);
+  document.body.style.overflow = locked ? 'hidden' : '';
+}
+
+function openCartOverlay(){
+  const overlay = document.getElementById('overlay');
+  const netflixOverlay = document.getElementById('netflix-variant-overlay');
+  if(!overlay) return;
+
+  if(netflixOverlay && netflixOverlay.classList.contains('open')){
+    closeNetflixVariantModal();
+  }
+
+  showOverlay();
+  overlay.classList.add('open');
+  setBodyScrollLocked(true);
+}
+
+function closeCartOverlay(){
+  const overlay = document.getElementById('overlay');
+  if(!overlay) return;
+  overlay.classList.remove('open');
+  const netflixOverlay = document.getElementById('netflix-variant-overlay');
+  if(!netflixOverlay || !netflixOverlay.classList.contains('open')){
+    setBodyScrollLocked(false);
+  }
+}
+
+function openNetflixVariantModal(){
+  const overlay = document.getElementById('netflix-variant-overlay');
+  const cartOverlay = document.getElementById('overlay');
+  if(!overlay) return;
+
+  if(cartOverlay && cartOverlay.classList.contains('open')){
+    closeCartOverlay();
+  }
+
+  overlay.classList.add('open');
+  overlay.setAttribute('aria-hidden', 'false');
+  setBodyScrollLocked(true);
+}
+
+function closeNetflixVariantModal(){
+  const overlay = document.getElementById('netflix-variant-overlay');
+  if(!overlay) return;
+  overlay.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+  const cartOverlay = document.getElementById('overlay');
+  if(!cartOverlay || !cartOverlay.classList.contains('open')){
+    setBodyScrollLocked(false);
+  }
+}
+
+function addNetflixVariantToCart(optionKey){
+  const variant = NETFLIX_VARIANTS[optionKey];
+  if(!variant) return;
+  const existing = cart.find(item => item.variantKey === optionKey);
+  if(existing){
+    existing.quantity += 1;
+  } else {
+    cart.push({
+      index: -1,
+      variantKey: optionKey,
+      categoria: 'perfil',
+      servicio: {
+        nombre: variant.name,
+        precio: variant.price,
+        entrega: 'Entrega al instante',
+        desc: '✔ Variante de acceso Netflix.'
+      },
+      quantity: 1
+    });
+  }
+  closeNetflixVariantModal();
+  showOverlay();
+}
 
 function money(n){ return "S/ " + n.toFixed(2); }
 
@@ -1291,9 +1535,35 @@ function removeCartItem(index){
 }
 
 function getWhatsAppLink(){
+  if(cart.length === 0){
+    return '';
+  }
+
   const total = getCartTotal();
-  const lines = cart.map(item => `${item.quantity}× ${item.servicio.nombre} (${money(item.servicio.precio)})`).join('\n');
-  const message = `Hola, ya realicé el pago por los siguientes servicios por la página web:\n${lines}\nTotal: ${money(total)}\n\nNombre para su perfil:\nNOTA: adjuntar comprobante de pago.`;
+  const profileItems = cart.filter(item => {
+    if(item.variantKey && NETFLIX_VARIANTS[item.variantKey]) return true;
+    return item.categoria === 'perfil';
+  });
+
+  const lines = cart.map(item => {
+    const label = item.variantKey && NETFLIX_VARIANTS[item.variantKey]
+      ? NETFLIX_VARIANTS[item.variantKey].name
+      : item.servicio.nombre;
+    const subtotal = item.servicio.precio * item.quantity;
+    return `${item.quantity}× ${label} — ${money(subtotal)}`;
+  }).join('\n');
+
+  const hasVip = profileItems.some(item => item.variantKey === 'vip');
+  const deviceLine = hasVip ? '📱 2 dispositivos a vincular:' : '📱 1 dispositivo a vincular:';
+
+  let message = `✅ Hola, realicé el pago por:\n${lines}\nTotal: ${money(total)}`;
+
+  if(profileItems.length > 0){
+    message += `\n\n👤 Nombre para el perfil:\n${deviceLine}\n\n📎 Adjuntar comprobante de pago.\n\n✅ Una vez enviados estos datos, procederemos con la activación del servicio.`;
+  } else {
+    message += `\n\n📎 Adjuntar comprobante de pago.\n\n✅ Una vez enviados estos datos, procederemos con la activación del servicio.`;
+  }
+
   return `https://wa.me/${NEGOCIO.whatsapp}?text=${encodeURIComponent(message)}`;
 }
 
@@ -1306,11 +1576,11 @@ function openWhatsAppInfo(servicioNombre, mensaje){
 function addToCart(index){
   const quantity = selectedQty[index] || 1;
   const servicio = SERVICIOS[index];
-  const existing = cart.find(item => item.index === index);
+  const existing = cart.find(item => item.index === index && item.categoria === servicio.tipo);
   if(existing){
     existing.quantity += quantity;
   } else {
-    cart.push({ index, servicio, quantity });
+    cart.push({ index, servicio, quantity, categoria: servicio.tipo });
   }
   showOverlay(index);
 }
@@ -1328,7 +1598,7 @@ function addPromoToCart(){
       desc: '✔ Disney+ Standard\n✔ HBO Max\n✔ Prime Video\n✔ Crunchyroll\n✔ Acceso inmediato\n✔ Soporte garantizado.',
       imagen: 'images/lobo.jpg',
     };
-    cart.push({ index: -1, servicio: promoServicio, quantity: 1 });
+    cart.push({ index: -1, servicio: promoServicio, quantity: 1, categoria: 'combos' });
   }
   showOverlay();
 }
@@ -1340,18 +1610,27 @@ function showOverlay(index){
   const paymentTotal = document.getElementById('payment-total');
   const confirmStep = document.getElementById('overlay-step-confirm');
   const payStep = document.getElementById('overlay-step-pay');
+  const checkoutButton = document.getElementById('checkout-cart');
   if(!overlay || !itemCount || !totalLabel || !confirmStep || !payStep || !paymentTotal) return;
 
   const count = getCartCount();
   const total = getCartTotal();
-  itemCount.textContent = formatItemCount(count);
+  const isEmpty = count === 0;
+
+  itemCount.textContent = isEmpty ? 'Tu carrito está vacío' : formatItemCount(count);
   totalLabel.textContent = `Total acumulado: ${money(total)}`;
   paymentTotal.textContent = `Total a pagar: ${money(total)}`;
   renderCartItems();
   updateCartCount();
+  if(checkoutButton){
+    checkoutButton.disabled = isEmpty;
+    checkoutButton.style.opacity = isEmpty ? '0.45' : '1';
+    checkoutButton.style.cursor = isEmpty ? 'not-allowed' : 'pointer';
+  }
   confirmStep.classList.add('active');
   payStep.classList.remove('active');
   overlay.classList.add('open');
+  setBodyScrollLocked(true);
 }
 
 function openPaymentStep(){
@@ -1359,6 +1638,9 @@ function openPaymentStep(){
   const payStep = document.getElementById('overlay-step-pay');
   const paymentTotal = document.getElementById('payment-total');
   if(!confirmStep || !payStep || !paymentTotal) return;
+  if(cart.length === 0 || getCartTotal() === 0){
+    return;
+  }
   const total = getCartTotal();
   paymentTotal.textContent = `Total a pagar: ${money(total)}`;
   confirmStep.classList.remove('active');
@@ -1374,8 +1656,12 @@ function backToConfirmStep(){
 }
 
 function confirmPayment(){
+  if(cart.length === 0 || getCartTotal() === 0){
+    return;
+  }
   document.getElementById('overlay')?.classList.remove('open');
   const waUrl = getWhatsAppLink();
+  if(!waUrl){ return; }
   window.location.href = waUrl;
 }
 
@@ -1391,12 +1677,27 @@ document.querySelectorAll('.qty-btn').forEach(btn => {
   btn.addEventListener('click', () => updateQuantity(Number(btn.dataset.i), btn.dataset.op === 'inc' ? 1 : -1));
 });
 
+document.querySelectorAll('.netflix-variant-btn').forEach(btn => {
+  btn.addEventListener('click', openNetflixVariantModal);
+});
+
 document.querySelectorAll('.serv-buy').forEach(btn => {
+  if(btn.classList.contains('netflix-variant-btn')) return;
   btn.addEventListener('click', () => addToCart(Number(btn.dataset.i)));
 });
 
+document.querySelectorAll('.netflix-option-btn').forEach(btn => {
+  btn.addEventListener('click', () => addNetflixVariantToCart(btn.dataset.netflixOption));
+});
+
+document.getElementById('netflix-modal-close')?.addEventListener('click', closeNetflixVariantModal);
+document.getElementById('netflix-modal-back')?.addEventListener('click', closeNetflixVariantModal);
+document.getElementById('netflix-variant-overlay')?.addEventListener('click', (e) => {
+  if(e.target === e.currentTarget) closeNetflixVariantModal();
+});
+
 document.getElementById('continue-shopping')?.addEventListener('click', () => {
-  document.getElementById('overlay')?.classList.remove('open');
+  closeCartOverlay();
 });
 
 document.getElementById('checkout-cart')?.addEventListener('click', openPaymentStep);
@@ -1420,13 +1721,29 @@ document.getElementById('overlay')?.addEventListener('click', e => {
   }
 
   if(e.target === e.currentTarget){
-    e.currentTarget.classList.remove('open');
+    closeCartOverlay();
   }
 });
 
 document.getElementById('modal-close')?.addEventListener('click', () => {
-  document.getElementById('overlay')?.classList.remove('open');
+  closeCartOverlay();
 });
+
+const cartIndicator = document.getElementById('cart-indicator');
+cartIndicator?.addEventListener('click', openCartOverlay);
+cartIndicator?.addEventListener('keydown', (event) => {
+  if(event.key === 'Enter' || event.key === ' '){
+    event.preventDefault();
+    openCartOverlay();
+  }
+});
+
+const promoTrack = document.getElementById('promo-marquee-track');
+if(promoTrack){
+  const promoMessages = [PROMO_CONFIG.headline, ...PROMO_CONFIG.messages];
+  const duplicated = [...promoMessages, ...promoMessages];
+  promoTrack.innerHTML = duplicated.map(message => `<span class="promo-marquee-item">${message}</span>`).join('');
+}
 
 // ============================================================================
 // LOADER ANIMATION - VERSIÓN ULTRA ROBUSTA CON DEBUGGING COMPLETO

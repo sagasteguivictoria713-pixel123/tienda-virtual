@@ -37,7 +37,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 14.50,
         "entrega": "Entrega al instante",
-        "desc": "✔ Películas, series y producciones exclusivas de Netflix.\n✔ Descarga tus títulos favoritos y míralos sin conexión.\n✔ Calidad de video hasta 4K Ultra HD + HDR.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Películas, series y producciones exclusivas de Netflix.\n✔ Descarga tus títulos favoritos y míralos sin conexión.\n✔ Calidad de video hasta 4K Ultra HD + HDR.",
         "imagen": "images/netflix1.jpg",
         "use_as_background": True,
     },
@@ -46,7 +46,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 9.50,
         "entrega": "Entrega al instante",
-        "desc": "✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Calidad de video hasta 4K UHD y HDR.\n✔ Descarga contenido para verlo sin conexión.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Disfruta los 7 canales ESPN de Disney Premium.\n✔ Descarga contenido para verlo sin conexión.",
         "imagen": "images/disneypremiun.jpg",
     },
     {
@@ -54,7 +54,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 7.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Descarga contenido y disfruta sin conexión.\n✔ Calidad de video hasta Full HD 1080p.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Descarga contenido y disfruta sin conexión.\n✔ No incluye los canales ESPN de Disney Premium.",
         "imagen": "images/disneystandard.jpg",
     },
     {
@@ -62,7 +62,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 5.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Películas, series y producciones Amazon Original.\n✔ Descarga contenido y disfruta sin conexión.\n✔ Video HD y Ultra HD en dispositivos compatibles.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Películas, series y producciones Amazon Original.\n✔ Descarga contenido y disfruta sin conexión.\n✔ Video HD y Ultra HD en dispositivos compatibles.",
         "imagen": "images/primevideo.jpg",
     },
     {
@@ -70,7 +70,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 6.50,
         "entrega": "Entrega al instante",
-        "desc": "✔ Series originales de HBO.\n✔ Películas taquilleras.\n✔ Estrenos exclusivos.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Series originales de HBO.\n✔ Películas taquilleras.\n✔ Estrenos exclusivos.",
         "imagen": "images/hbo.jpg",
     },
     {
@@ -78,7 +78,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 5.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Miles de episodios de anime.\n✔ Estrenos en simulcast.\n✔ Subtítulos en español.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Miles de episodios de anime.\n✔ Estrenos en simulcast.\n✔ Subtítulos en español.",
         "imagen": "images/CRUNCHYROLL1.png",
     },
     {
@@ -86,7 +86,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 9.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Música sin anuncios.\n✔ Descargas para escuchar sin internet.\n✔ Máxima calidad de audio.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Música sin anuncios.\n✔ Descargas para escuchar sin internet.\n✔ Entregamos correo y contraseña, listos para usar.",
         "imagen": "images/spotify1.png",
     },
     {
@@ -94,7 +94,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 150.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Entregamos correo y contraseña listos para usar.\n✔ Disfruta videos y música sin anuncios.\n✔ Descarga contenido y míralo sin conexión.",
+        "desc": "✔ Suscripción anual.\n✔ Entregamos correo y contraseña listos para usar.\n✔ Disfruta videos y música sin anuncios.\n✔ Descarga contenido y míralo sin conexión.",
         "imagen": "images/youtube.jpg",
     },
     {
@@ -102,7 +102,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 3.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Series y películas en español.\n✔ Deportes en vivo (según disponibilidad).\n✔ Sin anuncios en contenido Premium.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Series y películas en español.\n✔ Deportes en vivo (según disponibilidad).\n✔ Sin anuncios en contenido Premium.",
         "imagen": "images/VIX PREMIUN.jpg",
     },
     {
@@ -110,7 +110,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 8.50,
         "entrega": "Entrega al instante",
-        "desc": "✔ Películas taquilleras y series originales.\n✔ Mira en TV, celular, tablet y computadora.\n✔ Descarga títulos y disfruta sin conexión.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Películas taquilleras y series originales.\n✔ Mira en TV, celular, tablet y computadora.\n✔ Descarga títulos y disfruta sin conexión.",
         "imagen": "images/paramount.jpg",
     },
     {
@@ -118,7 +118,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 3.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Millones de plantillas premium.\n✔ Herramientas de IA para diseño.\n✔ Fondo transparente y redimensionado mágico.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Millones de plantillas premium.\n✔ Herramientas de IA para diseño.\n✔ Fondo transparente y redimensionado mágico.",
         "imagen": "images/canva1.png",
     },
     {
@@ -126,7 +126,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 12.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Plantillas, efectos y recursos Premium exclusivos.\n✔ Herramientas avanzadas de IA para edición de video.\n✔ Exportación en 4K y videos sin marca de agua.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Plantillas, efectos y recursos Premium exclusivos.\n✔ Herramientas avanzadas de IA para edición de video.\n✔ Exportación en 4K y videos sin marca de agua.",
         "imagen": "images/capcutpro.jpg",
     },
     {
@@ -134,7 +134,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 25.00,
         "entrega": "Entrega al instante",
-        "desc": "✔ Word, Excel, PowerPoint y Outlook incluidos.\n✔ Almacenamiento en la nube (OneDrive).\n✔ Acceso desde PC, Mac, celular y tablet.",
+        "desc": "✔ Suscripción anual.\n✔ Word, Excel, PowerPoint y Outlook incluidos.\n✔ Acceso desde PC, Mac, celular y tablet.\n✔ Sincronización de archivos con OneDrive.",
         "imagen": "images/microsoft365.jpg",
     },
     {
@@ -142,7 +142,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 13.50,
         "entrega": "Entrega al instante",
-        "desc": "✔ Se brinda correo y contraseña listo para usar.\n✔ Garantía por 30 días.\n✔ Acceso a modelos avanzados de razonamiento.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Se brinda correo y contraseña listo para usar.\n✔ Carga ilimitada de imágenes y documentos.\n✔ Acceso a modelos avanzados de razonamiento.",
         "imagen": "images/chatgpt.png",
     },
     {
@@ -150,7 +150,7 @@ SERVICIOS = [
         "tipo": "perfil",
         "precio": 9.50,
         "entrega": "Entrega al instante",
-        "desc": "✔ Se activa a tu correo.\n✔ Garantía por 30 días.\n✔ Acceso ampliado al modelo Gemini Pro.",
+        "desc": "✔ Suscripción mensual — 30 días.\n✔ Se activa a tu correo.\n✔ 5 TB de almacenamiento en la nube.\n✔ Acceso ampliado al modelo Gemini Pro.",
         "imagen": "images/geminipro1.jpg",
     },
     # ======================================================================
