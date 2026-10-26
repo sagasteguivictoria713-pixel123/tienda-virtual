@@ -140,7 +140,7 @@ SERVICIOS = [
     {
         "nombre": "CHATGPT PLUS",
         "tipo": "perfil",
-        "precio": 13.50,
+        "precio": 15.50,
         "entrega": "Entrega al instante",
         "desc": "✔ Suscripción mensual — 30 días.\n✔ Se brinda correo y contraseña listo para usar.\n✔ Carga ilimitada de imágenes y documentos.\n✔ Acceso a modelos avanzados de razonamiento.",
         "imagen": "images/chatgpt.png",
@@ -159,7 +159,7 @@ SERVICIOS = [
     {
         "nombre": "DISNEY PREMIUN (Cuenta Completa)",
         "tipo": "cuenta_completa",
-        "precio": 35.00,
+        "precio": 30.00,
         "entrega": "Entrega al instante",
         "desc": "✔ 7 perfiles / 4 simultáneos.\n✔ Películas y series de Disney, Pixar, Marvel y Star Wars.\n✔ Calidad de video hasta 4K UHD y HDR.",
         "imagen": "images/disneypremiun.jpg",
@@ -175,7 +175,7 @@ SERVICIOS = [
     {
         "nombre": "HBO MAX (Cuenta Completa)",
         "tipo": "cuenta_completa",
-        "precio": 26.00,
+        "precio": 20.00,
         "entrega": "Entrega al instante",
         "desc": "✔ 5 perfiles / 4 simultáneos.\n✔ Películas taquilleras.\n✔ Estrenos exclusivos.",
         "imagen": "images/hbo.jpg",
@@ -208,6 +208,7 @@ SERVICIOS = [
         "nombre": "CHATGPT PLUS (Cuenta Completa)",
         "tipo": "cuenta_completa",
         "precio": 45.00,
+        "disponible": False,
         "entrega": "Entrega al instante",
         "desc": "✔ Hasta 5 dispositivos.\n✔ Garantía por 30 días.\n✔ Acceso a modelos avanzados de razonamiento.",
         "imagen": "images/chatgpt.png",
@@ -242,18 +243,6 @@ SERVICIOS = [
         "imagen": "images/cellf.jpg",
         "whatsapp_msg": "Estoy interesado en comprar un celular sellado. Deseo más información sobre modelos, precios y stock disponible.",
     },
-    # ======================================================================
-    # COMBOS PERSONALIZADOS
-    # ======================================================================
-    {
-        "nombre": "COMBOS PERSONALIZADOS",
-        "tipo": "combos",
-        "sin_carrito": True,
-        "entrega": "Consulta por WhatsApp",
-        "desc": "✔ Arma tus dúos, tríos y mucha más Aplicaciones.\n✔ Recibe descuentos por llevar combos.\n✔ Licencias Renovables Mensuales.\n✔ Soporte y Garantía Constante.",
-        "imagen": "images/combo.jpg",
-        "whatsapp_msg": "Hola, estoy interesado(a) en armar un combo personalizado. Deseo las siguientes aplicaciones de streaming y acceder al descuento correspondiente. Estas son las apps que me interesan: ",
-    }
 ]
 
 # ======================================================================
