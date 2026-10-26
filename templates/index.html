@@ -177,87 +177,51 @@ header{
   .btn{width:100%; justify-content:center;}
 }
 
-.promo-marquee-wrap{
-  position:relative; width:100vw; margin-left:calc(50% - 50vw); margin-bottom:4px; overflow:hidden; border-top:1px solid rgba(255,255,255,0.08); border-bottom:1px solid rgba(255,255,255,0.08);
-  background:linear-gradient(90deg, rgba(87,185,138,0.10), rgba(73,226,182,0.16), rgba(87,185,138,0.10));
-  box-shadow:0 0 28px rgba(73,226,182,0.14), inset 0 0 22px rgba(73,226,182,0.10);
-  animation:promoGlow 4s ease-in-out infinite alternate;
-}
-.promo-marquee-track{
-  display:flex; align-items:center; white-space:nowrap; width:max-content; min-width:100%; gap:28px; padding:12px 0; animation:promoScroll 26s linear infinite;
-}
-.promo-marquee-item{
-  display:inline-flex; align-items:center; padding:0 10px; font-size:0.88rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#f3f7ff; opacity:0.96;
-}
-@keyframes promoScroll{
-  0%{transform:translateX(0);} 100%{transform:translateX(-50%);}
-}
-@keyframes promoGlow{
-  0%{box-shadow:0 0 18px rgba(73,226,182,0.12), inset 0 0 18px rgba(73,226,182,0.06);} 50%{box-shadow:0 0 28px rgba(73,226,182,0.22), inset 0 0 26px rgba(73,226,182,0.12);} 100%{box-shadow:0 0 18px rgba(73,226,182,0.12), inset 0 0 18px rgba(73,226,182,0.06);} 
-}
-@media (max-width:768px){
-  .promo-marquee-item{font-size:0.72rem; letter-spacing:0.04em;}
-  .promo-marquee-track{padding:10px 0; gap:18px;}
-}
-.promo-hero{display:grid; grid-template-columns:1.08fr 1fr; gap:28px; align-items:stretch; padding:56px 0 20px; border-top:1px solid var(--border);}
-.promo-hero .promo-img{display:flex; height:100%;}
-.promo-hero .promo-img img{width:100%; height:100%; min-height:420px; border-radius:28px; object-fit:cover; box-shadow:0 20px 60px rgba(0,0,0,0.25); display:block;}
-.promo-card{background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:28px; padding:28px 24px; box-shadow:0 30px 80px -40px rgba(0,0,0,0.5); transition:all 0.3s ease; cursor:pointer; display:flex; flex-direction:column; justify-content:flex-start; height:100%; width:100%; max-width:100%;}
-.promo-card:hover{transform:translateY(-4px); box-shadow:0 18px 40px rgba(73,226,182,0.12), 0 24px 60px rgba(79,195,255,0.08); border-color:rgba(73,226,182,0.32);}
-.promo-card .eyebrow{margin-bottom:16px; color:var(--text);}
-.promo-list{margin:0 0 20px; padding:0; list-style:none; color:var(--text); font-size:0.98rem; line-height:1.6; display:flex; flex-direction:column; gap:10px;}
-.promo-list li{position:relative; margin:0; padding-left:26px; display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; color:var(--text);}
-.promo-list li:before{content:'✔'; position:absolute; left:0; color:var(--violet); font-weight:700;}
-.promo-list li span{font-weight:700; color:var(--paper); letter-spacing:0.04em;}
-.promo-inline-badges{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:0 0 20px;}
-.promo-chip{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:10px 14px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.04);
-  color:var(--text);
-  font-family:'Space Mono',monospace;
-  font-size:0.7rem;
-  letter-spacing:0.09em;
-  text-transform:uppercase;
-  font-weight:700;
-  line-height:1.2;
-  white-space:nowrap;
-}
-.promo-price-row{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:20px; flex-wrap:wrap;}
-.promo-price{font-family:'Space Mono',monospace; font-size:1.75rem; font-weight:700; color:var(--paper); line-height:1.2;}
-.promo-badge{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:6px;
-  padding:8px 12px;
-  border-radius:999px;
-  background:rgba(73,226,182,0.12);
-  border:1px solid rgba(73,226,182,0.35);
-  color:var(--violet);
-  font-family:'Space Mono',monospace;
-  font-size:0.72rem;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  font-weight:700;
-  line-height:1;
-  white-space:nowrap;
-}
-.promo-btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:14px 24px; border-radius:999px; background:linear-gradient(135deg,#57B98A 0%,#89DFC0 100%); color:#111; text-decoration:none; font-weight:700; transition:transform .18s; width:100%;}
-.promo-btn:hover{transform:translateY(-2px);}
-@media(max-width:900px){ .promo-hero{grid-template-columns:1fr; } .promo-hero .promo-img img{min-height:260px; max-height:360px;} }
-@media(max-width:768px){ #pagina-web .wrap > div{flex-direction:column; align-items:center; text-align:center;} #pagina-web .wrap > div a{width:100%;} .promo-hero .promo-img img{min-height:220px; max-height:300px;} .promo-card{padding:22px 18px;} .promo-list li{font-size:0.92rem;} .promo-inline-badges{gap:10px;} .promo-chip{letter-spacing:0.06em; font-size:0.64rem; padding:9px 12px;} .promo-price-row{justify-content:space-between; align-items:center;} }
-@media(max-width:420px){ .promo-inline-badges{display:flex; flex-wrap:wrap;} .promo-chip{flex:1 1 100%; width:100%;} .promo-price-row{align-items:flex-start;} .promo-price{font-size:1.55rem;} }
 .eyebrow{
   font-family:'Space Mono',monospace; font-size:0.78rem; letter-spacing:0.18em;
   color:rgba(79,255,209,0.95); text-transform:uppercase; margin-bottom:14px;
   text-shadow:0 0 12px rgba(79,255,209,0.2);
 }
 .hero h1{font-size:clamp(2.1rem, 4.4vw, 3.4rem); line-height:1.08; margin-bottom:18px; color:#FFFFFF; text-shadow:0 0 18px rgba(0,0,0,0.25);}
+/* TEMA HALLOWEEN + CANCIÓN CRIOLLA: eliminar este bloque para desactivar la temática. */
+.tema-halloween{
+  position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none;
+  color:#d8d5de; opacity:0.5;
+}
+.tema-halloween .spiderweb{
+  position:absolute; top:4px; width:104px; height:104px; opacity:0.32;
+}
+.tema-halloween .spiderweb-left{left:4px;}
+.tema-halloween .spiderweb-right{right:4px; transform:scaleX(-1);}
+.tema-halloween .season-decor{
+  position:absolute; display:block; pointer-events:none; user-select:none;
+  animation:seasonFloat 7s ease-in-out infinite;
+}
+.tema-halloween .pumpkin-one{left:4%; bottom:12%; font-size:2rem;}
+.tema-halloween .pumpkin-two{right:6%; top:34%; font-size:1.8rem; animation-delay:-3.5s;}
+.tema-halloween .guitar-one{left:46%; bottom:8%; font-size:1.7rem; animation-delay:-2s;}
+.tema-halloween .guitar-two{right:4%; bottom:12%; font-size:1.8rem; animation-delay:-5s;}
+.hero-season-badge{
+  display:inline-flex; align-items:center; justify-content:center; gap:6px;
+  max-width:100%; margin:0 0 18px; padding:8px 14px; border-radius:999px;
+  border:1px solid rgba(255,122,24,0.42); background:rgba(55,25,70,0.72);
+  color:#ff9a4d; font-family:'Space Mono',monospace; font-size:0.72rem;
+  line-height:1.45; font-weight:700; letter-spacing:0.03em; text-align:center;
+  pointer-events:none;
+}
+@keyframes seasonFloat{
+  0%,100%{transform:translateY(0) rotate(-3deg);}
+  50%{transform:translateY(-7px) rotate(3deg);}
+}
+@media(max-width:768px){
+  .tema-halloween .spiderweb{width:72px; height:72px; opacity:0.25;}
+  .tema-halloween .pumpkin-one{left:2%; bottom:5%; font-size:1.5rem;}
+  .tema-halloween .pumpkin-two,.tema-halloween .guitar-one,.tema-halloween .guitar-two{display:none;}
+  .hero-season-badge{font-size:0.65rem; padding:7px 10px; margin-bottom:14px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .tema-halloween .season-decor{animation:none;}
+}
 .hero p{font-size:1.05rem; color:rgba(243,236,216,0.9); max-width:520px; margin-bottom:30px;}
 .cta-row{display:flex; gap:14px; flex-wrap:wrap;}
 .btn-primary{background:linear-gradient(135deg, #57B98A 0%, #89DFC0 100%); color:#111; box-shadow:0 14px 28px -12px rgba(79,255,209,0.45);}
@@ -321,6 +285,8 @@ header{
   .servicios-grid{grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:18px;}
   .serv-card{min-height:320px;}
   .serv-top .serv-name{font-size:1rem;}
+  .serv-top--profile{height:96px;}
+  .serv-top.serv-top--profile .serv-name{font-size:0.88rem;}
   .serv-foot .serv-desc{font-size:0.86rem;}
   .price-big{font-size:1.35rem;}
   .serv-foot .serv-buy{min-width:120px; padding:9px 12px;}
@@ -360,10 +326,15 @@ header{
 .serv-card::before{ display:none; }
 .serv-card img{ width:100%; height:120px; object-fit:cover; display:block; }
 .serv-media{ height:120px; background-size:cover; background-position:center; display:block; }
-.serv-top{ padding:12px 14px 10px; }
+.serv-top{ padding:12px 14px 10px; background:#0a0c16; }
+.serv-top--profile{ display:flex; flex-direction:column; height:96px; }
 .serv-top .serv-badge{ display:inline-flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.08); color:#dcdce7; padding:6px 12px; border-radius:999px; font-size:0.72rem; margin-bottom:8px; letter-spacing:0.08em; text-transform:uppercase; }
 .serv-top .serv-meta{ font-size:0.8rem; color:#bfc4d4; letter-spacing:0.08em; margin-bottom:6px; }
 .serv-top .serv-name{ font-family:'Space Grotesk',sans-serif; font-size:1.1rem; margin-top:0; line-height:1.2; font-weight:700; }
+.serv-top--profile .serv-meta{ margin-bottom:0; font-size:0.7rem; line-height:1.2; }
+.serv-heading{ display:flex; align-items:center; justify-content:space-between; gap:10px; min-width:0; flex:1; }
+.serv-top--profile .serv-name{ flex:1; min-width:0; overflow-wrap:anywhere; }
+.serv-top--profile .serv-badge{ flex-shrink:0; white-space:nowrap; margin-bottom:0; }
 .serv-foot{ background:#0d0830; color:var(--paper); padding:16px; display:flex; flex-direction:column; gap:8px; align-items:flex-start; min-height:150px; flex:1; }
 .serv-foot .serv-desc{ color:#e8e8f0; font-family:'Inter',sans-serif; font-size:0.92rem; line-height:1.4; min-height:72px; display:block; }
 .serv-quantity{ display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); border-radius:999px; padding:6px 8px; }
@@ -376,6 +347,7 @@ header{
   margin-top:auto;
   flex-wrap:wrap;
 }
+.qty-row > .stock-badge{ margin-left:auto; }
 .stock-badge{
   color:var(--violet);
   font-size:0.76rem;
@@ -394,17 +366,7 @@ header{
   font-family:'Space Mono', monospace;
   white-space:nowrap;
 }
-.netflix-main-availability-row{
-  display:flex;
-  justify-content:flex-end;
-  width:100%;
-  margin-top:auto;
-}
-.netflix-main-availability-row .stock-badge{
-  display:inline-flex;
-  align-items:center;
-  margin-left:auto;
-}
+.stock-badge.agotado{color:#ff6b6b;}
 .price-big{
   font-family:'Space Mono',monospace;
   font-size:clamp(1.2rem, 4.5vw, 2rem);
@@ -416,6 +378,8 @@ header{
 .serv-actions{ display:flex; gap:10px; flex-wrap:nowrap; align-items:center; width:100%; justify-content:space-between; }
 .serv-foot .serv-buy{ background:#7d3cff; color:#fff; padding:10px 16px; border-radius:28px; font-weight:800; text-align:center; min-width:140px; text-transform:uppercase; flex-shrink:0; }
 .serv-foot .serv-buy:hover{ background:#5b1cf2; }
+.serv-foot .serv-buy:disabled,
+.serv-foot .serv-buy:disabled:hover{ background:#7d3cff; opacity:0.55; cursor:not-allowed; }
 .serv-foot .serv-info-btn{ background:linear-gradient(135deg, var(--violet) 0%, #79d4c1 100%); color:#fff; padding:12px 20px; border-radius:28px; font-weight:800; text-align:center; width:100%; text-transform:uppercase; cursor:pointer; border:none; font-size:0.95rem; transition:all 0.3s ease; }
 .serv-foot .serv-info-btn:hover{ background:linear-gradient(135deg, #3cc9a8 0%, #49e2b6 100%); box-shadow:0 8px 20px rgba(73,226,182,0.4); transform:translateY(-2px); }
 .serv-name{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.12rem; margin-top:6px;}
@@ -1038,12 +1002,22 @@ body.modal-open{overflow:hidden; touch-action:none;}
   </div>
 </header>
 
-<div class="promo-marquee-wrap" aria-live="polite">
-  <div class="promo-marquee-track" id="promo-marquee-track"></div>
-</div>
-
 <section class="hero wrap">
+  <!-- TEMA HALLOWEEN + CANCIÓN CRIOLLA: adornos decorativos del hero. -->
+  <div class="tema-halloween" aria-hidden="true">
+    <svg class="spiderweb spiderweb-left" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+      <path d="M4 4H116M4 4V116M4 4L116 116M4 4L116 44M4 4L44 116M4 24Q24 24 24 4M4 44Q44 44 44 4M4 68Q68 68 68 4M4 92Q92 92 92 4M24 4Q24 24 4 24M44 4Q44 44 4 44M68 4Q68 68 4 68M92 4Q92 92 4 92" stroke="currentColor" stroke-width="1.4"/>
+    </svg>
+    <svg class="spiderweb spiderweb-right" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+      <path d="M4 4H116M4 4V116M4 4L116 116M4 4L116 44M4 4L44 116M4 24Q24 24 24 4M4 44Q44 44 44 4M4 68Q68 68 68 4M4 92Q92 92 92 4M24 4Q24 24 4 24M44 4Q44 44 4 44M68 4Q68 68 4 68M92 4Q92 92 4 92" stroke="currentColor" stroke-width="1.4"/>
+    </svg>
+    <span class="season-decor pumpkin-one">🎃</span>
+    <span class="season-decor pumpkin-two">🎃</span>
+    <span class="season-decor guitar-one">🎸</span>
+    <span class="season-decor guitar-two">🎸</span>
+  </div>
   <div>
+    <div class="hero-season-badge">🎃 Feliz Halloween y Día de la Canción Criolla 🎸</div>
     <div class="hero-badge">◆ Tu entretenimiento sin límites</div>
     <h1>Licencias Digitales al <span class="accent">Mejor Precio</span></h1>
     <p>Acceso inmediato a tus plataformas favoritas. Precios competitivos, entrega al instante y soporte 24/7.</p>
@@ -1073,30 +1047,6 @@ body.modal-open{overflow:hidden; touch-action:none;}
   </div>
 </section>
 
-<section class="promo-hero wrap">
-  <div class="promo-img">
-    <img src="{{ url_for('static', filename='images/superf.jpg') }}" alt="Promoción" />
-  </div>
-  <div class="promo-card">
-    <div class="eyebrow">🎉 <strong>SÚPER PROMOCIÓN INCLUYE:</strong></div>
-    <ul class="promo-list">
-      <li><span>1 ACCESO •</span> Disney+ Standard</li>
-      <li><span>1 ACCESO •</span> HBO Max</li>
-      <li><span>1 ACCESO •</span> Prime Video</li>
-      <li><span>1 ACCESO •</span> Crunchyroll</li>
-    </ul>
-    <div class="promo-inline-badges">
-      <span class="promo-chip">⚡ ACTIVACIÓN INMEDIATA</span>
-      <span class="promo-chip">🛡️ SOPORTE GARANTIZADO</span>
-    </div>
-    <div class="promo-price-row">
-      <div class="promo-price">S/ 15</div>
-      <span class="promo-badge">🟢 DISPONIBLE</span>
-    </div>
-    <button class="promo-btn" type="button" onclick="addPromoToCart()">ADQUIÉRELO</button>
-  </div>
-</section>
-
 <section class="section" id="servicios">
   <div class="wrap">
     <div class="section-head">
@@ -1107,9 +1057,6 @@ body.modal-open{overflow:hidden; touch-action:none;}
     <div class="tabs-container" style="margin-bottom: 32px;">
       <button class="tab-btn active" data-filter="perfil" onclick="filterServicios('perfil')">
         Perfiles
-      </button>
-      <button class="tab-btn" data-filter="combos" onclick="filterServicios('combos')">
-        Combos
       </button>
       <button class="tab-btn" data-filter="cuenta_completa" onclick="filterServicios('cuenta_completa')">
         Cuentas Completas
@@ -1130,10 +1077,19 @@ body.modal-open{overflow:hidden; touch-action:none;}
         <div class="serv-media" style="background-image: url('https://placehold.co/420x240/1B1B16/F3ECD8?text=Sin+imagen')"></div>
         {% endif %}
 
-        <div class="serv-top">
+        <div class="serv-top{% if s.tipo == 'perfil' %} serv-top--profile{% endif %}">
+          {% if s.tipo != 'perfil' %}
           <div class="serv-badge">{{ s.tipo }}</div>
+          {% endif %}
           <div class="serv-meta">{{ s.entrega }}</div>
+          {% if s.tipo == 'perfil' %}
+          <div class="serv-heading">
+            <div class="serv-name">{{ s.nombre }}</div>
+            <div class="serv-badge">PERFIL</div>
+          </div>
+          {% else %}
           <div class="serv-name">{{ s.nombre }}</div>
+          {% endif %}
         </div>
 
         <div class="serv-foot">
@@ -1142,7 +1098,7 @@ body.modal-open{overflow:hidden; touch-action:none;}
           {% if not s.get('sin_carrito', False) %}
           <!-- PRODUCTOS CON CARRITO -->
           {% if s.nombre == 'NETFLIX PREMIUN' %}
-          <div class="netflix-main-availability-row">
+          <div class="qty-row">
             <span class="stock-badge">● Disponible</span>
           </div>
           <div class="serv-actions">
@@ -1156,11 +1112,11 @@ body.modal-open{overflow:hidden; touch-action:none;}
               <span class="qty-value" id="qty-{{ loop.index0 }}">1</span>
               <button class="qty-btn" data-i="{{ loop.index0 }}" data-op="inc">+</button>
             </div>
-            <span class="stock-badge">* Disponible</span>
+            <span class="stock-badge{% if not s.get('disponible', True) %} agotado{% endif %}">{% if s.get('disponible', True) %}* Disponible{% else %}NO DISPONIBLE{% endif %}</span>
           </div>
           <div class="serv-actions">
             <div class="price-big">S/ {{ "%.2f"|format(s.precio) }}</div>
-            <button class="serv-buy" data-i="{{ loop.index0 }}">Añadir +</button>
+            <button class="serv-buy" data-i="{{ loop.index0 }}" {% if not s.get('disponible', True) %}disabled{% endif %}>Añadir +</button>
           </div>
           {% endif %}
           {% else %}
@@ -1270,7 +1226,7 @@ body.modal-open{overflow:hidden; touch-action:none;}
   </div>
 </section>
 
-<a class="wa-float" id="wa-float" href="#" target="_blank" aria-label="Escríbenos por WhatsApp">
+<a class="wa-float" id="wa-float" href="https://wa.me/51924481118?text=Hola%2C%20Necesito%20su%20apoyo%20en%3A" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="#08240F"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1s-.8 1-1 1.2c-.2.2-.4.2-.7.1-1.6-.7-2.7-1.7-3.6-3.2-.2-.4 0-.5.2-.7.2-.2.4-.5.6-.7.2-.2.2-.4.1-.7-.1-.2-.7-1.7-1-2.3-.2-.5-.4-.5-.6-.5h-.6c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2 0 1.3 1 2.6 1.1 2.7.1.2 2 3.2 4.9 4.3 2.4.9 2.9.7 3.4.6.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.2L2 22l4.9-1.5C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3 1 1-2.9-.2-.3C3.5 15 3 13.5 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"/></svg>
 </a>
 
@@ -1364,17 +1320,6 @@ const NEGOCIO = {{ negocio_json|safe }};
 const SERVICIOS = {{ servicios_json|safe }};
 const selectedQty = SERVICIOS.map(() => 1);
 const cart = [];
-const PROMO_CONFIG = {
-  startDate: '2026-08-16',
-  endDate: '2026-08-23',
-  headline: '🔥 PROMOCIÓN ACTIVA — Del 16 al 23 de agosto, compra cualquier membresía mensual desde nuestra página web y recibe 35 días por el precio de 30. 🚀',
-  messages: [
-    '⚡ Activación inmediata en la mayoría de nuestros servicios.',
-    '💬 Soporte y atención todos los días.',
-    '🛒 Compra rápida, fácil y segura desde nuestra página web.',
-    '🎁 Promociones exclusivas para compras realizadas desde la web.'
-  ]
-};
 const NETFLIX_VARIANTS = {
   economico: {
     name: 'Netflix Acceso Económico',
@@ -1576,6 +1521,7 @@ function openWhatsAppInfo(servicioNombre, mensaje){
 function addToCart(index){
   const quantity = selectedQty[index] || 1;
   const servicio = SERVICIOS[index];
+  if(!servicio || servicio.disponible === false) return;
   const existing = cart.find(item => item.index === index && item.categoria === servicio.tipo);
   if(existing){
     existing.quantity += quantity;
@@ -1583,24 +1529,6 @@ function addToCart(index){
     cart.push({ index, servicio, quantity, categoria: servicio.tipo });
   }
   showOverlay(index);
-}
-
-function addPromoToCart(){
-  const promoName = 'Super Combo';
-  const existing = cart.find(item => item.servicio.nombre.toLowerCase() === promoName.toLowerCase());
-  if(existing){
-    existing.quantity += 1;
-  } else {
-    const promoServicio = {
-      nombre: promoName,
-      precio: 15.00,
-      entrega: 'Entrega al instante',
-      desc: '✔ Disney+ Standard\n✔ HBO Max\n✔ Prime Video\n✔ Crunchyroll\n✔ Acceso inmediato\n✔ Soporte garantizado.',
-      imagen: 'images/lobo.jpg',
-    };
-    cart.push({ index: -1, servicio: promoServicio, quantity: 1, categoria: 'combos' });
-  }
-  showOverlay();
 }
 
 function showOverlay(index){
@@ -1664,10 +1592,6 @@ function confirmPayment(){
   if(!waUrl){ return; }
   window.location.href = waUrl;
 }
-
-const waLink = 'https://chat.whatsapp.com/GVfDBzEPBrcLa2cy8QGUhW?s=cl&p=a&mlu=0';
-const waFloat = document.getElementById('wa-float');
-if (waFloat) waFloat.href = waLink;
 
 const footWaLink = `https://wa.me/${NEGOCIO.whatsapp}?text=${encodeURIComponent('Hola, quiero más información')}`;
 const footWa = document.getElementById('foot-wa');
@@ -1738,12 +1662,6 @@ cartIndicator?.addEventListener('keydown', (event) => {
   }
 });
 
-const promoTrack = document.getElementById('promo-marquee-track');
-if(promoTrack){
-  const promoMessages = [PROMO_CONFIG.headline, ...PROMO_CONFIG.messages];
-  const duplicated = [...promoMessages, ...promoMessages];
-  promoTrack.innerHTML = duplicated.map(message => `<span class="promo-marquee-item">${message}</span>`).join('');
-}
 
 // ============================================================================
 // LOADER ANIMATION - VERSIÓN ULTRA ROBUSTA CON DEBUGGING COMPLETO

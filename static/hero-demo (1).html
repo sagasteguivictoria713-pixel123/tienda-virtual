@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sección Hero - Licencias Digitales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #050D24;
+      color: #F3ECD8;
+      font-family: 'Work Sans', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* VARIABLES */
+    :root {
+      --hero-bg: #050D24;
+      --hero-accent: #49E2B6;
+      --hero-text: #F3ECD8;
+      --hero-muted: #9FC8E1;
+      --hero-border: rgba(243, 236, 216, 0.14);
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    .hero-premium {
+      position: relative;
+      padding: 120px 24px 80px;
+      background: var(--hero-bg);
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+    }
+
+    /* TEXTURAS DE FONDO */
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(90deg, rgba(73, 226, 182, 0.04) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(73, 226, 182, 0.04) 1px, transparent 1px);
+      background-size: 80px 80px;
+      background-position: 0 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-bg-gradient {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(73, 226, 182, 0.15) 0%, transparent 25%),
+        radial-gradient(circle at 85% 15%, rgba(79, 255, 209, 0.12) 0%, transparent 20%),
+        linear-gradient(180deg, rgba(5, 13, 36, 0.8) 0%, rgba(4, 14, 37, 0.95) 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* CONTENEDOR DE CONTENIDO */
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .hero-premium .wrap {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* BADGE SUPERIOR */
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: rgba(73, 226, 182, 0.1);
+      border: 1px solid rgba(73, 226, 182, 0.3);
+      border-radius: 999px;
+      margin-bottom: 32px;
+      backdrop-filter: blur(10px);
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .badge-icon {
+      font-size: 1.2rem;
+      color: var(--hero-accent);
+      font-weight: 700;
+    }
+
+    .badge-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--hero-text);
+      text-shadow: 0 0 8px rgba(73, 226, 182, 0.15);
+    }
+
+    /* TÍTULO PRINCIPAL (H1) */
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--hero-text);
+      margin-bottom: 20px;
+      text-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 0.8s ease-out 0.1s both;
+    }
+
+    .hero-accent {
+      color: var(--hero-accent);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-accent::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--hero-accent), transparent);
+      border-radius: 2px;
+    }
+
+    /* SUBTÍTULO */
+    .hero-subtitle {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 1.08rem;
+      line-height: 1.6;
+      color: var(--hero-muted);
+      margin-bottom: 40px;
+      max-width: 580px;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    /* BOTONES CTA */
+    .hero-cta-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+      animation: fadeInUp 0.8s ease-out 0.3s both;
+    }
+
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* BOTÓN PRIMARIO */
+    .hero-btn-primary {
+      background: linear-gradient(135deg, var(--hero-accent) 0%, #3dce9f 100%);
+      color: #050D24;
+      box-shadow: 0 12px 32px -8px rgba(73, 226, 182, 0.4);
+    }
+
+    .hero-btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px -4px rgba(73, 226, 182, 0.5);
+    }
+
+    .hero-btn-primary:active {
+      transform: translateY(-1px);
+    }
+
+    /* BOTÓN SECUNDARIO */
+    .hero-btn-secondary {
+      background: rgba(243, 236, 216, 0.08);
+      color: var(--hero-text);
+      border: 1.5px solid rgba(73, 226, 182, 0.35);
+      box-shadow: 0 8px 24px -10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-btn-secondary:hover {
+      background: rgba(73, 226, 182, 0.12);
+      border-color: rgba(73, 226, 182, 0.6);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px -6px rgba(73, 226, 182, 0.25);
+    }
+
+    .hero-btn-secondary:active {
+      transform: translateY(-1px);
+    }
+
+    .btn-icon {
+      font-size: 1.2rem;
+    }
+
+    /* ESTADÍSTICAS */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 32px;
+      max-width: 520px;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .stat-number {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: var(--hero-accent);
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--hero-muted);
+    }
+
+    /* ANIMACIONES */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-premium {
+        padding: 80px 20px 60px;
+        min-height: auto;
+      }
+
+      .hero-title {
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+        margin-bottom: 16px;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+      }
+
+      .hero-cta-row {
+        margin-bottom: 48px;
+      }
+
+      .hero-btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+      }
+
+      .hero-stats {
+        gap: 24px;
+      }
+
+      .stat-number {
+        font-size: clamp(1.4rem, 3.5vw, 2rem);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-premium {
+        padding: 60px 16px 48px;
+      }
+
+      .hero-badge {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 8px 14px;
+      }
+
+      .badge-text {
+        font-size: 0.8rem;
+      }
+
+      .hero-title {
+        font-size: 1.6rem;
+        line-height: 1.2;
+      }
+
+      .hero-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .hero-cta-row {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .hero-btn {
+        width: 100%;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+      }
+
+      .stat-number {
+        font-size: 1.3rem;
+      }
+
+      .stat-label {
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- SECCIÓN HERO PREMIUM -->
+  <section class="hero-premium">
+    <div class="wrap">
+      <!-- BADGE SUPERIOR -->
+      <div class="hero-badge">
+        <span class="badge-icon">◆</span>
+        <span class="badge-text">Tu entretenimiento sin límites</span>
+      </div>
+
+      <!-- TÍTULO PRINCIPAL (H1) -->
+      <h1 class="hero-title">
+        Licencias Digitales al
+        <span class="hero-accent">Mejor Precio</span>
+      </h1>
+
+      <!-- SUBTÍTULO -->
+      <p class="hero-subtitle">
+        Acceso inmediato a tus plataformas favoritas. Precios competitivos, entrega al instante y soporte 24/7.
+      </p>
+
+      <!-- BOTONES CTA -->
+      <div class="hero-cta-row">
+        <button class="hero-btn hero-btn-primary">
+          <span class="btn-icon">🛒</span>
+          Ver catálogo
+        </button>
+        <button class="hero-btn hero-btn-secondary">
+          <span class="btn-icon">▷</span>
+          ¿Cómo funciona?
+        </button>
+      </div>
+
+      <!-- ESTADÍSTICAS -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">18+</div>
+          <div class="stat-label">Productos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Entrega de Licencias</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">2,521+</div>
+          <div class="stat-label">Ventas</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FONDO CON TEXTURA Y GRADIENTE -->
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-gradient"></div>
+  </section>
+</body>
+</html>
